@@ -17,7 +17,7 @@
           // ServerConfig config = App.serverConfig("src/main/java/app");
           // HttpServer server = HttpServer.config(config).build();
           Results results = Runner.path("classpath:/api_tests/laureates_get.feature")
-                  .systemProperty("url.base", "http://localhost")
+                  .systemProperty("url.base", "https://api.nobelprize.org")
                   .parallel(1);
           assertEquals(0, results.getFailCount(), results.getErrorMessages());
       }

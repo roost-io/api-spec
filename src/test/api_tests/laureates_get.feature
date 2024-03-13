@@ -11,7 +11,9 @@
 Feature: Test /2.1/laureates endpoint
 
 Background:
-  * url target
+  * def urlBase = karate.properties['url.base'] || karate.get('urlBase', 'http://localhost:8080')
+  * url urlBase
+
 
 Scenario: Test GET /2.1/laureates with valid parameters
   Given path '/2.1/laureates'
