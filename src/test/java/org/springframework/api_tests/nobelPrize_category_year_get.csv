@@ -1,0 +1,11 @@
+category,year,statusCode,responseBody
+"Physics",1901,200,"{\"prize\":\"Nobel Prize in Physics\",\"laureates\":[{\"id\":\"1\",\"firstname\":\"Wilhelm\",\"lastname\":\"Conrad Röntgen\"}]}"`
+"Chemistry",1911,404,"{\"error\":\"Not Found\"}"
+"Literature",1922,201,"{\"prize\":\"Nobel Prize in Literature\",\"laureates\":[{\"id\":\"2\",\"firstname\":\"Anatole\",\"lastname\":\"France\"}]}"`
+"Peace",1933,200,"{\"prize\":\"Nobel Prize in Peace\",\"laureates\":[{\"id\":\"3\",\"firstname\":\"Ralph\",\"lastname\":\"Norman Angell\"}]}"`
+"Economics",1944,500,"{\"error\":\"Internal Server Error\"}"
+"Physiology or Medicine",1955,200,"{\"prize\":\"Nobel Prize in Physiology or Medicine\",\"laureates\":[{\"id\":\"4\",\"firstname\":\"Axel\",\"lastname\":\"Hugo Theodor Theorell\"}]}"`
+"Physics",1966,404,"{\"error\":\"Not Found\"}"
+"Chemistry",1977,201,"{\"prize\":\"Nobel Prize in Chemistry\",\"laureates\":[{\"id\":\"5\",\"firstname\":\"Ilya\",\"lastname\":\"Prigogine\"}]}"`
+"Literature",1988,200,"{\"prize\":\"Nobel Prize in Literature\",\"laureates\":[{\"id\":\"6\",\"firstname\":\"Naguib\",\"lastname\":\"Mahfouz\"}]}"`
+"Peace",1999,500,"{\"error\":\"Internal Server Error\"}"

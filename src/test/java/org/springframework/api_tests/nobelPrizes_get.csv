@@ -1,0 +1,11 @@
+year,yearTo,category,year,yearTo,category,category
+1905,1920,"Physics","1905",1930,"Chemistry","Medicine"
+1990,2000,"Economics","1995",2010,"Literature","Peace"
+2015,2020,"Chemistry","2000",2025,"Physics","Medicine"
+1901,1910,"Medicine","1905",1925,"Economics","Literature"
+1910,1920,"Peace","1915",1935,"Chemistry","Physics"
+2005,2015,"Literature","2000",2020,"Economics","Peace"
+1925,1935,"Physics","1920",1940,"Medicine","Chemistry"
+1945,1955,"Economics","1940",1960,"Literature","Peace"
+1955,1965,"Chemistry","1950",1970,"Physics","Medicine"
+1980,1990,"Medicine","1985",2000,"Economics","Literature"

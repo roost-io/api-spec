@@ -1,0 +1,11 @@
+laureateID,statusCode,code,message,headers
+1,200,"OK","\"Successful\"","{\"key\":\"value\"}"
+2,400,"Bad Request","\"Invalid Request\"","{\"error\":\"true\"}"
+3,500,"Internal Server Error","\"Server Down\"","{\"status\":\"down\"}"
+4,201,"Created","\"Resource Created\"","{\"resource\":\"created\"}"
+5,403,"Forbidden","\"Access Denied\"","{\"access\":\"denied\"}"
+6,404,"Not Found","\"Resource Not Found\"","{\"resource\":\"not found\"}"
+7,202,"Accepted","\"Request Accepted\"","{\"request\":\"accepted\"}"
+8,301,"Moved Permanently","\"Resource Moved\"","{\"resource\":\"moved\"}"
+9,409,"Conflict","\"Resource Conflict\"","{\"resource\":\"conflict\"}"
+10,302,"Found","\"Resource Found\"","{\"resource\":\"found\"}"
