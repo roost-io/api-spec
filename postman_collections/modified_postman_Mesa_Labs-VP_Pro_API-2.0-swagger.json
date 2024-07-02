@@ -1,0 +1,2794 @@
+{
+  "item": [
+    {
+      "id": "bf5ff28a-3867-42e4-a1a0-41d09a05a7d4",
+      "name": "api/v2",
+      "item": [
+        {
+          "id": "ee6f2710-1189-4c52-99c8-822dd2b35b55",
+          "name": "/api/v2/readings",
+          "request": {
+            "name": "/api/v2/readings",
+            "description": {},
+            "url": {
+              "path": [
+                "api",
+                "v2",
+                "readings"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "start",
+                  "value": "{{start}}",
+                  "description": "\"The start datetime for the window of readings\" \\\n\"Readings before this datetime will not be included in the results\" \\\n\"If this parameter is not specified, the most recent reading for each Asset will be provided\"\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "end",
+                  "value": "{{end}}",
+                  "description": "\"The end datetime for the window of readings\" \\\n\"Readings after this datetime will not be included in the results\" \\\n\"A valid 'start' parameter must be included if this parameter is used\"\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "sort",
+                  "value": "{{sort}}",
+                  "description": "\"The parameter with which to sort the highest level of items returned by the endpoint\"\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "page",
+                  "value": "{{page}}",
+                  "description": "\"The page number of results to be loaded, e.g. page 3 of 5\" \\\n\"A valid 'per' parameter must be included if this parameter is used\"\n"
+                },
+                {
+                  "disabled": false,
+                  "key": "per",
+                  "value": "{{per}}",
+                  "description": "\"The number of results to load per page, e.g. 25 per page\" \\\n\"A valid 'page' parameter must be included if this parameter is used\"\n"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7225fa60-06dc-435b-84df-b96ee56f4a06",
+              "name": "Readings for all Assets in the system with an Active or Disabled status",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "readings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "start",
+                      "value": "{{start}}"
+                    },
+                    {
+                      "key": "end",
+                      "value": "{{end}}"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "{{sort}}"
+                    },
+                    {
+                      "key": "page",
+                      "value": "{{page}}"
+                    },
+                    {
+                      "key": "per",
+                      "value": "{{per}}"
+                    },
+                    {
+                      "key": "token",
+                      "value": "{{token}}"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1425a903-9383-4ce9-b74d-71d5cc31c5b2",
+              "name": "Invalid start or end parameter provided, or end provided without start",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "readings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "start",
+                      "value": "{{start}}"
+                    },
+                    {
+                      "key": "end",
+                      "value": "{{end}}"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "{{sort}}"
+                    },
+                    {
+                      "key": "page",
+                      "value": "{{page}}"
+                    },
+                    {
+                      "key": "per",
+                      "value": "{{per}}"
+                    },
+                    {
+                      "key": "token",
+                      "value": "{{token}}"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "91935b15-a1bb-4a7e-8231-79799d59c571",
+              "name": "No valid API token/key values have been provided with the request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "readings"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "start",
+                      "value": "{{start}}"
+                    },
+                    {
+                      "key": "end",
+                      "value": "{{end}}"
+                    },
+                    {
+                      "key": "sort",
+                      "value": "{{sort}}"
+                    },
+                    {
+                      "key": "page",
+                      "value": "{{page}}"
+                    },
+                    {
+                      "key": "per",
+                      "value": "{{per}}"
+                    },
+                    {
+                      "key": "token",
+                      "value": "{{token}}"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test vp-pro-api using AI Type Azure Open AI and AI Model roostgpt-4-32k\n\n\nTest generated for /api/v2/readings?start=<dateTime>&end=<dateTime>&sort=<string>&page=<integer>&per=<integer> for http method type get in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n        console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"Readings for all Assets in the system with an Active or Disabled status\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"OK\");\n          pm.response.to.have.header(\"Content-Type\");\n\n          });\n\n        }\n\nif (pm.response.code == 400){\n    pm.test(\"Invalid start or end parameter provided, or end provided without start\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Bad Request\");\n      });\n\n    }\n\nif (pm.response.code == 401){\n    pm.test(\"No valid API token/key values have been provided with the request\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n      });\n\n    }\n"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e1712101-e242-46d7-9e36-2e4f1d39ec6f",
+          "name": "assets",
+          "item": [
+            {
+              "id": "c1a7383d-cca7-42ea-b50b-48f0c1bd223d",
+              "name": "/api/v2/assets",
+              "request": {
+                "name": "/api/v2/assets",
+                "description": {},
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "assets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "disabled": false,
+                      "key": "sort",
+                      "value": "{{sort}}",
+                      "description": "\"The parameter with which to sort the highest level of items returned by the endpoint\"\n"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "page",
+                      "value": "{{page}}",
+                      "description": "\"The page number of results to be loaded, e.g. page 3 of 5\" \\\n\"A valid 'per' parameter must be included if this parameter is used\"\n"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "per",
+                      "value": "{{per}}",
+                      "description": "\"The number of results to load per page, e.g. 25 per page\" \\\n\"A valid 'page' parameter must be included if this parameter is used\"\n"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "{{name}}",
+                      "description": "\"A string to filter returned assets on via their 'name' attribute\" \\\n\"e.g. a value of 'abc' would return all Assets with 'abc' in their name\"\n"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "tag",
+                      "value": "{{tag}}",
+                      "description": "\"A string to filter returned assets on via their 'tag' attribute\" \\\n\"e.g. a value of 'abc' would return all Assets with 'abc' in their tag\"\n"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "state",
+                      "value": "{{state}}",
+                      "description": "\"A string to filter returned assets on via their 'state' attribute\" \\\n\"Valid values are only 'enabled' or 'disabled'\"\n"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "auth": null
+              },
+              "response": [
+                {
+                  "id": "71c2256c-533d-4de2-ab73-96c6116b7d99",
+                  "name": "All Assets in the system with an Active or Distabled status",
+                  "originalRequest": {
+                    "url": {
+                      "path": [
+                        "api",
+                        "v2",
+                        "assets"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [
+                        {
+                          "key": "sort",
+                          "value": "{{sort}}"
+                        },
+                        {
+                          "key": "page",
+                          "value": "{{page}}"
+                        },
+                        {
+                          "key": "per",
+                          "value": "{{per}}"
+                        },
+                        {
+                          "key": "name",
+                          "value": "{{name}}"
+                        },
+                        {
+                          "key": "tag",
+                          "value": "{{tag}}"
+                        },
+                        {
+                          "key": "state",
+                          "value": "{{state}}"
+                        },
+                        {
+                          "key": "token",
+                          "value": "{{token}}"
+                        }
+                      ],
+                      "variable": []
+                    },
+                    "method": "GET",
+                    "body": {}
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "text/plain"
+                    }
+                  ],
+                  "body": "",
+                  "cookie": [],
+                  "_postman_previewlanguage": "text"
+                },
+                {
+                  "id": "145aed40-b6ec-48a4-90bd-4cd2a66161e7",
+                  "name": "No valid API token/key values have been provided with the request",
+                  "originalRequest": {
+                    "url": {
+                      "path": [
+                        "api",
+                        "v2",
+                        "assets"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [
+                        {
+                          "key": "sort",
+                          "value": "{{sort}}"
+                        },
+                        {
+                          "key": "page",
+                          "value": "{{page}}"
+                        },
+                        {
+                          "key": "per",
+                          "value": "{{per}}"
+                        },
+                        {
+                          "key": "name",
+                          "value": "{{name}}"
+                        },
+                        {
+                          "key": "tag",
+                          "value": "{{tag}}"
+                        },
+                        {
+                          "key": "state",
+                          "value": "{{state}}"
+                        },
+                        {
+                          "key": "token",
+                          "value": "{{token}}"
+                        }
+                      ],
+                      "variable": []
+                    },
+                    "method": "GET",
+                    "body": {}
+                  },
+                  "status": "Unauthorized",
+                  "code": 401,
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "text/plain"
+                    }
+                  ],
+                  "body": "",
+                  "cookie": [],
+                  "_postman_previewlanguage": "text"
+                }
+              ],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test vp-pro-api using AI Type Azure Open AI and AI Model roostgpt-4-32k\n\n\nTest generated for /api/v2/assets?sort=<string>&page=<integer>&per=<integer>&name=<string>&tag=<string>&state=<string> for http method type get in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n        console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"All Assets in the system with an Active or Distabled status\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"OK\");\n      });\n\n    }\n\nif (pm.response.code == 401){\n    pm.test(\"No valid API token/key values have been provided with the request\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n      });\n\n    }\n"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              }
+            },
+            {
+              "id": "e3c79cc0-6b5f-477d-94fd-0d627aeb8a78",
+              "name": "{asset_id}",
+              "item": [
+                {
+                  "id": "f4038146-dfe0-4463-b922-3020c07dfef5",
+                  "name": "/api/v2/assets/:asset_id",
+                  "request": {
+                    "name": "/api/v2/assets/:asset_id",
+                    "description": {},
+                    "url": {
+                      "path": [
+                        "api",
+                        "v2",
+                        "assets",
+                        ":asset_id"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [],
+                      "variable": [
+                        {
+                          "disabled": false,
+                          "type": "any",
+                          "value": "{{asset_id}}",
+                          "key": "asset_id",
+                          "description": "(Required) \"The internal identifier of an Asset within the system\"\n"
+                        }
+                      ]
+                    },
+                    "method": "GET",
+                    "auth": null
+                  },
+                  "response": [
+                    {
+                      "id": "451c423e-0ebf-4786-a61c-ad1160f18366",
+                      "name": "Detailed information for a single Asset",
+                      "originalRequest": {
+                        "url": {
+                          "path": [
+                            "api",
+                            "v2",
+                            "assets",
+                            ":asset_id"
+                          ],
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "query": [
+                            {
+                              "key": "token",
+                              "value": "{{token}}"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "disabled": false,
+                              "type": "any",
+                              "value": "{{asset_id}}",
+                              "key": "asset_id",
+                              "description": "(Required) \"The internal identifier of an Asset within the system\"\n"
+                            }
+                          ]
+                        },
+                        "method": "GET",
+                        "body": {}
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "text/plain"
+                        }
+                      ],
+                      "body": "",
+                      "cookie": [],
+                      "_postman_previewlanguage": "text"
+                    },
+                    {
+                      "id": "c704e97f-83ad-452e-b66c-b411edbde926",
+                      "name": "No valid API token/key values have been provided with the request",
+                      "originalRequest": {
+                        "url": {
+                          "path": [
+                            "api",
+                            "v2",
+                            "assets",
+                            ":asset_id"
+                          ],
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "query": [
+                            {
+                              "key": "token",
+                              "value": "{{token}}"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "disabled": false,
+                              "type": "any",
+                              "value": "{{asset_id}}",
+                              "key": "asset_id",
+                              "description": "(Required) \"The internal identifier of an Asset within the system\"\n"
+                            }
+                          ]
+                        },
+                        "method": "GET",
+                        "body": {}
+                      },
+                      "status": "Unauthorized",
+                      "code": 401,
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "text/plain"
+                        }
+                      ],
+                      "body": "",
+                      "cookie": [],
+                      "_postman_previewlanguage": "text"
+                    }
+                  ],
+                  "event": [
+                    {
+                      "listen": "test",
+                      "script": {
+                        "exec": [
+                          " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test vp-pro-api using AI Type Azure Open AI and AI Model roostgpt-4-32k\n\n\nTest generated for /api/v2/assets/:asset_id for http method type get in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n        console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"Detailed information for a single Asset\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"OK\");\n    });\n\n}\n\nif (pm.response.code == 401){\n    pm.test(\"No valid API token/key values have been provided with the request\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n    });\n\n}\n"
+                        ],
+                        "type": "text/javascript"
+                      }
+                    }
+                  ],
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  }
+                },
+                {
+                  "id": "8a205d8b-0574-4c2f-8bf8-17b4fd6631fa",
+                  "name": "/api/v2/assets/:asset_id/readings",
+                  "request": {
+                    "name": "/api/v2/assets/:asset_id/readings",
+                    "description": {},
+                    "url": {
+                      "path": [
+                        "api",
+                        "v2",
+                        "assets",
+                        ":asset_id",
+                        "readings"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [
+                        {
+                          "disabled": false,
+                          "key": "start",
+                          "value": "{{start}}",
+                          "description": "\"The start datetime for the window of readings\" \\\n\"Readings before this datetime will not be included in the results\" \\\n\"If this parameter is not specified, the most recent reading for each Asset will be provided\"\n"
+                        },
+                        {
+                          "disabled": false,
+                          "key": "end",
+                          "value": "{{end}}",
+                          "description": "\"The end datetime for the window of readings\" \\\n\"Readings after this datetime will not be included in the results\" \\\n\"A valid 'start' parameter must be included if this parameter is used\"\n"
+                        }
+                      ],
+                      "variable": [
+                        {
+                          "disabled": false,
+                          "type": "any",
+                          "value": "{{asset_id}}",
+                          "key": "asset_id",
+                          "description": "(Required) \"The internal identifier of an Asset within the system\"\n"
+                        }
+                      ]
+                    },
+                    "method": "GET",
+                    "auth": null
+                  },
+                  "response": [
+                    {
+                      "id": "b7885cc0-2a54-45ab-a1f2-02c2d331986f",
+                      "name": "Readings for a single Asset",
+                      "originalRequest": {
+                        "url": {
+                          "path": [
+                            "api",
+                            "v2",
+                            "assets",
+                            ":asset_id",
+                            "readings"
+                          ],
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "query": [
+                            {
+                              "key": "start",
+                              "value": "{{start}}"
+                            },
+                            {
+                              "key": "end",
+                              "value": "{{end}}"
+                            },
+                            {
+                              "key": "token",
+                              "value": "{{token}}"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "disabled": false,
+                              "type": "any",
+                              "value": "{{asset_id}}",
+                              "key": "asset_id",
+                              "description": "(Required) \"The internal identifier of an Asset within the system\"\n"
+                            }
+                          ]
+                        },
+                        "method": "GET",
+                        "body": {}
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "text/plain"
+                        }
+                      ],
+                      "body": "",
+                      "cookie": [],
+                      "_postman_previewlanguage": "text"
+                    },
+                    {
+                      "id": "533aaae1-2c53-4b9b-a8e3-108e67c6ffd1",
+                      "name": "No valid API token/key values have been provided with the request",
+                      "originalRequest": {
+                        "url": {
+                          "path": [
+                            "api",
+                            "v2",
+                            "assets",
+                            ":asset_id",
+                            "readings"
+                          ],
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "query": [
+                            {
+                              "key": "start",
+                              "value": "{{start}}"
+                            },
+                            {
+                              "key": "end",
+                              "value": "{{end}}"
+                            },
+                            {
+                              "key": "token",
+                              "value": "{{token}}"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "disabled": false,
+                              "type": "any",
+                              "value": "{{asset_id}}",
+                              "key": "asset_id",
+                              "description": "(Required) \"The internal identifier of an Asset within the system\"\n"
+                            }
+                          ]
+                        },
+                        "method": "GET",
+                        "body": {}
+                      },
+                      "status": "Unauthorized",
+                      "code": 401,
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "text/plain"
+                        }
+                      ],
+                      "body": "",
+                      "cookie": [],
+                      "_postman_previewlanguage": "text"
+                    }
+                  ],
+                  "event": [
+                    {
+                      "listen": "test",
+                      "script": {
+                        "exec": [
+                          " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test vp-pro-api using AI Type Azure Open AI and AI Model roostgpt-4-32k\n\n\nTest generated for /api/v2/assets/:asset_id/readings?start=<dateTime>&end=<dateTime> for http method type get in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n        console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"Readings for a single Asset\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"OK\");\n      });\n\n    }\n\nif (pm.response.code == 401){\n    pm.test(\"No valid API token/key values have been provided with the request\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n      });\n\n    }\n"
+                        ],
+                        "type": "text/javascript"
+                      }
+                    }
+                  ],
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  }
+                },
+                {
+                  "id": "6cf2afdf-8518-4fe1-8e93-867a4a62ceed",
+                  "name": "/api/v2/assets/:asset_id/sensor",
+                  "request": {
+                    "name": "/api/v2/assets/:asset_id/sensor",
+                    "description": {},
+                    "url": {
+                      "path": [
+                        "api",
+                        "v2",
+                        "assets",
+                        ":asset_id",
+                        "sensor"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [],
+                      "variable": [
+                        {
+                          "disabled": false,
+                          "type": "any",
+                          "value": "{{asset_id}}",
+                          "key": "asset_id",
+                          "description": "(Required) \"The internal identifier of an Asset within the system\"\n"
+                        }
+                      ]
+                    },
+                    "method": "GET",
+                    "auth": null
+                  },
+                  "response": [
+                    {
+                      "id": "926326e9-a799-4d0f-8393-7cc9131f2268",
+                      "name": "Sensor information for a single Asset",
+                      "originalRequest": {
+                        "url": {
+                          "path": [
+                            "api",
+                            "v2",
+                            "assets",
+                            ":asset_id",
+                            "sensor"
+                          ],
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "query": [
+                            {
+                              "key": "token",
+                              "value": "{{token}}"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "disabled": false,
+                              "type": "any",
+                              "value": "{{asset_id}}",
+                              "key": "asset_id",
+                              "description": "(Required) \"The internal identifier of an Asset within the system\"\n"
+                            }
+                          ]
+                        },
+                        "method": "GET",
+                        "body": {}
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "text/plain"
+                        }
+                      ],
+                      "body": "",
+                      "cookie": [],
+                      "_postman_previewlanguage": "text"
+                    },
+                    {
+                      "id": "d69ae258-fb17-4ef4-94f4-5ccc5db33cef",
+                      "name": "No valid API token/key values have been provided with the request",
+                      "originalRequest": {
+                        "url": {
+                          "path": [
+                            "api",
+                            "v2",
+                            "assets",
+                            ":asset_id",
+                            "sensor"
+                          ],
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "query": [
+                            {
+                              "key": "token",
+                              "value": "{{token}}"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "disabled": false,
+                              "type": "any",
+                              "value": "{{asset_id}}",
+                              "key": "asset_id",
+                              "description": "(Required) \"The internal identifier of an Asset within the system\"\n"
+                            }
+                          ]
+                        },
+                        "method": "GET",
+                        "body": {}
+                      },
+                      "status": "Unauthorized",
+                      "code": 401,
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "text/plain"
+                        }
+                      ],
+                      "body": "",
+                      "cookie": [],
+                      "_postman_previewlanguage": "text"
+                    }
+                  ],
+                  "event": [
+                    {
+                      "listen": "test",
+                      "script": {
+                        "exec": [
+                          " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test vp-pro-api using AI Type Azure Open AI and AI Model roostgpt-4-32k\n\n\nTest generated for /api/v2/assets/:asset_id/sensor for http method type get in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n        console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"Sensor information for a single Asset\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"OK\");\n    });\n\n}\n\nif (pm.response.code == 401){\n    pm.test(\"No valid API token/key values have been provided with the request\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n    });\n\n}\n"
+                        ],
+                        "type": "text/javascript"
+                      }
+                    }
+                  ],
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  }
+                },
+                {
+                  "id": "84afb9e4-f00a-4c04-b284-1cbea7037f0d",
+                  "name": "channels",
+                  "item": [
+                    {
+                      "id": "1041b894-2d65-48a8-9544-cf7b1556d2a7",
+                      "name": "/api/v2/assets/:asset_id/channels",
+                      "request": {
+                        "name": "/api/v2/assets/:asset_id/channels",
+                        "description": {},
+                        "url": {
+                          "path": [
+                            "api",
+                            "v2",
+                            "assets",
+                            ":asset_id",
+                            "channels"
+                          ],
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "query": [],
+                          "variable": [
+                            {
+                              "disabled": false,
+                              "type": "any",
+                              "value": "{{asset_id}}",
+                              "key": "asset_id",
+                              "description": "(Required) \"The internal identifier of an Asset within the system\"\n"
+                            }
+                          ]
+                        },
+                        "method": "GET",
+                        "auth": null
+                      },
+                      "response": [
+                        {
+                          "id": "a529a2ce-441c-4ceb-ace0-91a4ffa82013",
+                          "name": "Available channels/inputs for a single Asset",
+                          "originalRequest": {
+                            "url": {
+                              "path": [
+                                "api",
+                                "v2",
+                                "assets",
+                                ":asset_id",
+                                "channels"
+                              ],
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "query": [
+                                {
+                                  "key": "token",
+                                  "value": "{{token}}"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "disabled": false,
+                                  "type": "any",
+                                  "value": "{{asset_id}}",
+                                  "key": "asset_id",
+                                  "description": "(Required) \"The internal identifier of an Asset within the system\"\n"
+                                }
+                              ]
+                            },
+                            "method": "GET",
+                            "body": {}
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "text/plain"
+                            }
+                          ],
+                          "body": "",
+                          "cookie": [],
+                          "_postman_previewlanguage": "text"
+                        },
+                        {
+                          "id": "8e1847af-b656-42b1-9c94-491cb5f48a1d",
+                          "name": "No valid API token/key values have been provided with the request",
+                          "originalRequest": {
+                            "url": {
+                              "path": [
+                                "api",
+                                "v2",
+                                "assets",
+                                ":asset_id",
+                                "channels"
+                              ],
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "query": [
+                                {
+                                  "key": "token",
+                                  "value": "{{token}}"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "disabled": false,
+                                  "type": "any",
+                                  "value": "{{asset_id}}",
+                                  "key": "asset_id",
+                                  "description": "(Required) \"The internal identifier of an Asset within the system\"\n"
+                                }
+                              ]
+                            },
+                            "method": "GET",
+                            "body": {}
+                          },
+                          "status": "Unauthorized",
+                          "code": 401,
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "text/plain"
+                            }
+                          ],
+                          "body": "",
+                          "cookie": [],
+                          "_postman_previewlanguage": "text"
+                        }
+                      ],
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "exec": [
+                              " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test vp-pro-api using AI Type Azure Open AI and AI Model roostgpt-4-32k\n\n\nTest generated for /api/v2/assets/:asset_id/channels for http method type get in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n        console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"Available channels/inputs for a single Asset\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"OK\");\n    });\n\n}\n\nif (pm.response.code == 401){\n    pm.test(\"No valid API token/key values have been provided with the request\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n    });\n\n}\n"
+                            ],
+                            "type": "text/javascript"
+                          }
+                        }
+                      ],
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      }
+                    },
+                    {
+                      "id": "dd9e558c-2672-4b84-b1ab-8cee3367c89c",
+                      "name": "{channel_id}",
+                      "item": [
+                        {
+                          "id": "a1099e37-b934-4510-8f59-0c7f9cb9bad8",
+                          "name": "/api/v2/assets/:asset_id/channels/:channel_id",
+                          "request": {
+                            "name": "/api/v2/assets/:asset_id/channels/:channel_id",
+                            "description": {},
+                            "url": {
+                              "path": [
+                                "api",
+                                "v2",
+                                "assets",
+                                ":asset_id",
+                                "channels",
+                                ":channel_id"
+                              ],
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "query": [],
+                              "variable": [
+                                {
+                                  "disabled": false,
+                                  "type": "any",
+                                  "value": "{{asset_id}}",
+                                  "key": "asset_id",
+                                  "description": "(Required) \"The internal identifier of an Asset within the system\"\n"
+                                },
+                                {
+                                  "disabled": false,
+                                  "type": "any",
+                                  "value": "{{channel_id}}",
+                                  "key": "channel_id",
+                                  "description": "(Required) \"The identifier of the channel/input for a given Asset or Sensor\" \\\n\"Must be a value between 1 and 3, with 3 always being a binary channel/input\"\n"
+                                }
+                              ]
+                            },
+                            "method": "GET",
+                            "auth": null
+                          },
+                          "response": [
+                            {
+                              "id": "f3240de5-c88d-4718-bd62-a70a88dcfc17",
+                              "name": "Detailed channel/input information for a single Asset",
+                              "originalRequest": {
+                                "url": {
+                                  "path": [
+                                    "api",
+                                    "v2",
+                                    "assets",
+                                    ":asset_id",
+                                    "channels",
+                                    ":channel_id"
+                                  ],
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "query": [
+                                    {
+                                      "key": "token",
+                                      "value": "{{token}}"
+                                    }
+                                  ],
+                                  "variable": [
+                                    {
+                                      "disabled": false,
+                                      "type": "any",
+                                      "value": "{{asset_id}}",
+                                      "key": "asset_id",
+                                      "description": "(Required) \"The internal identifier of an Asset within the system\"\n"
+                                    },
+                                    {
+                                      "disabled": false,
+                                      "type": "any",
+                                      "value": "{{channel_id}}",
+                                      "key": "channel_id",
+                                      "description": "(Required) \"The identifier of the channel/input for a given Asset or Sensor\" \\\n\"Must be a value between 1 and 3, with 3 always being a binary channel/input\"\n"
+                                    }
+                                  ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "text/plain"
+                                }
+                              ],
+                              "body": "",
+                              "cookie": [],
+                              "_postman_previewlanguage": "text"
+                            },
+                            {
+                              "id": "8e87c6c3-a422-4aae-a6e4-885563f84887",
+                              "name": "No valid API token/key values have been provided with the request",
+                              "originalRequest": {
+                                "url": {
+                                  "path": [
+                                    "api",
+                                    "v2",
+                                    "assets",
+                                    ":asset_id",
+                                    "channels",
+                                    ":channel_id"
+                                  ],
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "query": [
+                                    {
+                                      "key": "token",
+                                      "value": "{{token}}"
+                                    }
+                                  ],
+                                  "variable": [
+                                    {
+                                      "disabled": false,
+                                      "type": "any",
+                                      "value": "{{asset_id}}",
+                                      "key": "asset_id",
+                                      "description": "(Required) \"The internal identifier of an Asset within the system\"\n"
+                                    },
+                                    {
+                                      "disabled": false,
+                                      "type": "any",
+                                      "value": "{{channel_id}}",
+                                      "key": "channel_id",
+                                      "description": "(Required) \"The identifier of the channel/input for a given Asset or Sensor\" \\\n\"Must be a value between 1 and 3, with 3 always being a binary channel/input\"\n"
+                                    }
+                                  ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                              },
+                              "status": "Unauthorized",
+                              "code": 401,
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "text/plain"
+                                }
+                              ],
+                              "body": "",
+                              "cookie": [],
+                              "_postman_previewlanguage": "text"
+                            }
+                          ],
+                          "event": [
+                            {
+                              "listen": "test",
+                              "script": {
+                                "exec": [
+                                  " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test vp-pro-api using AI Type Azure Open AI and AI Model roostgpt-4-32k\n\n\nTest generated for /api/v2/assets/:asset_id/channels/:channel_id for http method type get in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n        console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"Detailed channel/input information for a single Asset\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"OK\");\n    });\n\n}\n\nif (pm.response.code == 401){\n    pm.test(\"No valid API token/key values have been provided with the request\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n    });\n\n}\n"
+                                ],
+                                "type": "text/javascript"
+                              }
+                            }
+                          ],
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          }
+                        },
+                        {
+                          "id": "34c6b979-7e20-47f2-8e2d-2fc230ba4b86",
+                          "name": "/api/v2/assets/:asset_id/channels/:channel_id/readings",
+                          "request": {
+                            "name": "/api/v2/assets/:asset_id/channels/:channel_id/readings",
+                            "description": {},
+                            "url": {
+                              "path": [
+                                "api",
+                                "v2",
+                                "assets",
+                                ":asset_id",
+                                "channels",
+                                ":channel_id",
+                                "readings"
+                              ],
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "query": [
+                                {
+                                  "disabled": false,
+                                  "key": "start",
+                                  "value": "{{start}}",
+                                  "description": "\"The start datetime for the window of readings\" \\\n\"Readings before this datetime will not be included in the results\" \\\n\"If this parameter is not specified, the most recent reading for each Asset will be provided\"\n"
+                                },
+                                {
+                                  "disabled": false,
+                                  "key": "end",
+                                  "value": "{{end}}",
+                                  "description": "\"The end datetime for the window of readings\" \\\n\"Readings after this datetime will not be included in the results\" \\\n\"A valid 'start' parameter must be included if this parameter is used\"\n"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "disabled": false,
+                                  "type": "any",
+                                  "value": "{{asset_id}}",
+                                  "key": "asset_id",
+                                  "description": "(Required) \"The internal identifier of an Asset within the system\"\n"
+                                },
+                                {
+                                  "disabled": false,
+                                  "type": "any",
+                                  "value": "{{channel_id}}",
+                                  "key": "channel_id",
+                                  "description": "(Required) \"The identifier of the channel/input for a given Asset or Sensor\" \\\n\"Must be a value between 1 and 3, with 3 always being a binary channel/input\"\n"
+                                }
+                              ]
+                            },
+                            "method": "GET",
+                            "auth": null
+                          },
+                          "response": [
+                            {
+                              "id": "08099ddd-eaff-4731-85b0-36f14deaa3ba",
+                              "name": "Readings for a single channel/input for a single Asset",
+                              "originalRequest": {
+                                "url": {
+                                  "path": [
+                                    "api",
+                                    "v2",
+                                    "assets",
+                                    ":asset_id",
+                                    "channels",
+                                    ":channel_id",
+                                    "readings"
+                                  ],
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "query": [
+                                    {
+                                      "key": "start",
+                                      "value": "{{start}}"
+                                    },
+                                    {
+                                      "key": "end",
+                                      "value": "{{end}}"
+                                    },
+                                    {
+                                      "key": "token",
+                                      "value": "{{token}}"
+                                    }
+                                  ],
+                                  "variable": [
+                                    {
+                                      "disabled": false,
+                                      "type": "any",
+                                      "value": "{{asset_id}}",
+                                      "key": "asset_id",
+                                      "description": "(Required) \"The internal identifier of an Asset within the system\"\n"
+                                    },
+                                    {
+                                      "disabled": false,
+                                      "type": "any",
+                                      "value": "{{channel_id}}",
+                                      "key": "channel_id",
+                                      "description": "(Required) \"The identifier of the channel/input for a given Asset or Sensor\" \\\n\"Must be a value between 1 and 3, with 3 always being a binary channel/input\"\n"
+                                    }
+                                  ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "text/plain"
+                                }
+                              ],
+                              "body": "",
+                              "cookie": [],
+                              "_postman_previewlanguage": "text"
+                            },
+                            {
+                              "id": "15b1c369-3170-40c1-a768-cd3a34b60a9d",
+                              "name": "No valid API token/key values have been provided with the request",
+                              "originalRequest": {
+                                "url": {
+                                  "path": [
+                                    "api",
+                                    "v2",
+                                    "assets",
+                                    ":asset_id",
+                                    "channels",
+                                    ":channel_id",
+                                    "readings"
+                                  ],
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "query": [
+                                    {
+                                      "key": "start",
+                                      "value": "{{start}}"
+                                    },
+                                    {
+                                      "key": "end",
+                                      "value": "{{end}}"
+                                    },
+                                    {
+                                      "key": "token",
+                                      "value": "{{token}}"
+                                    }
+                                  ],
+                                  "variable": [
+                                    {
+                                      "disabled": false,
+                                      "type": "any",
+                                      "value": "{{asset_id}}",
+                                      "key": "asset_id",
+                                      "description": "(Required) \"The internal identifier of an Asset within the system\"\n"
+                                    },
+                                    {
+                                      "disabled": false,
+                                      "type": "any",
+                                      "value": "{{channel_id}}",
+                                      "key": "channel_id",
+                                      "description": "(Required) \"The identifier of the channel/input for a given Asset or Sensor\" \\\n\"Must be a value between 1 and 3, with 3 always being a binary channel/input\"\n"
+                                    }
+                                  ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                              },
+                              "status": "Unauthorized",
+                              "code": 401,
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "text/plain"
+                                }
+                              ],
+                              "body": "",
+                              "cookie": [],
+                              "_postman_previewlanguage": "text"
+                            }
+                          ],
+                          "event": [
+                            {
+                              "listen": "test",
+                              "script": {
+                                "exec": [
+                                  " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test vp-pro-api using AI Type Azure Open AI and AI Model roostgpt-4-32k\n\n\nTest generated for /api/v2/assets/:asset_id/channels/:channel_id/readings?start=<dateTime>&end=<dateTime> for http method type get in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n        console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"Readings for a single channel/input for a single Asset\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"OK\");\n      });\n\n    }\n\nif (pm.response.code == 401){\n    pm.test(\"No valid API token/key values have been provided with the request\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n      });\n\n    }\n"
+                                ],
+                                "type": "text/javascript"
+                              }
+                            }
+                          ],
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          }
+                        }
+                      ],
+                      "event": []
+                    }
+                  ],
+                  "event": []
+                }
+              ],
+              "event": []
+            }
+          ],
+          "event": []
+        },
+        {
+          "id": "50e295aa-ba56-4217-bd1e-c5cd2a7b51d1",
+          "name": "sensors",
+          "item": [
+            {
+              "id": "5c2e529c-ba73-417d-9966-ed57831e9a51",
+              "name": "/api/v2/sensors",
+              "request": {
+                "name": "/api/v2/sensors",
+                "description": {},
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "sensors"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "disabled": false,
+                      "key": "sort",
+                      "value": "{{sort}}",
+                      "description": "\"The parameter with which to sort the highest level of items returned by the endpoint\"\n"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "page",
+                      "value": "{{page}}",
+                      "description": "\"The page number of results to be loaded, e.g. page 3 of 5\" \\\n\"A valid 'per' parameter must be included if this parameter is used\"\n"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "per",
+                      "value": "{{per}}",
+                      "description": "\"The number of results to load per page, e.g. 25 per page\" \\\n\"A valid 'page' parameter must be included if this parameter is used\"\n"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "auth": null
+              },
+              "response": [
+                {
+                  "id": "18d9450d-6056-4ce0-ac24-7991b51e45b0",
+                  "name": "All Sensors in the system",
+                  "originalRequest": {
+                    "url": {
+                      "path": [
+                        "api",
+                        "v2",
+                        "sensors"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [
+                        {
+                          "key": "sort",
+                          "value": "{{sort}}"
+                        },
+                        {
+                          "key": "page",
+                          "value": "{{page}}"
+                        },
+                        {
+                          "key": "per",
+                          "value": "{{per}}"
+                        },
+                        {
+                          "key": "token",
+                          "value": "{{token}}"
+                        }
+                      ],
+                      "variable": []
+                    },
+                    "method": "GET",
+                    "body": {}
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "text/plain"
+                    }
+                  ],
+                  "body": "",
+                  "cookie": [],
+                  "_postman_previewlanguage": "text"
+                },
+                {
+                  "id": "877524ea-948a-4e4b-af67-f1a8d2a7c468",
+                  "name": "No valid API token/key values have been provided with the request",
+                  "originalRequest": {
+                    "url": {
+                      "path": [
+                        "api",
+                        "v2",
+                        "sensors"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [
+                        {
+                          "key": "sort",
+                          "value": "{{sort}}"
+                        },
+                        {
+                          "key": "page",
+                          "value": "{{page}}"
+                        },
+                        {
+                          "key": "per",
+                          "value": "{{per}}"
+                        },
+                        {
+                          "key": "token",
+                          "value": "{{token}}"
+                        }
+                      ],
+                      "variable": []
+                    },
+                    "method": "GET",
+                    "body": {}
+                  },
+                  "status": "Unauthorized",
+                  "code": 401,
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "text/plain"
+                    }
+                  ],
+                  "body": "",
+                  "cookie": [],
+                  "_postman_previewlanguage": "text"
+                }
+              ],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test vp-pro-api using AI Type Azure Open AI and AI Model roostgpt-4-32k\n\n\nTest generated for /api/v2/sensors?sort=<string>&page=<integer>&per=<integer> for http method type get in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n        console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"All Sensors in the system\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"OK\");\n      });\n\n    }\n\nif (pm.response.code == 401){\n    pm.test(\"No valid API token/key values have been provided with the request\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n      });\n\n    }\n"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              }
+            },
+            {
+              "id": "28400df6-9baf-434d-9acf-22bf2d4740d4",
+              "name": "{sensor_id}",
+              "item": [
+                {
+                  "id": "66e4d4b9-3836-4bac-a469-ce2bf08a751a",
+                  "name": "/api/v2/sensors/:sensor_id",
+                  "request": {
+                    "name": "/api/v2/sensors/:sensor_id",
+                    "description": {},
+                    "url": {
+                      "path": [
+                        "api",
+                        "v2",
+                        "sensors",
+                        ":sensor_id"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [],
+                      "variable": [
+                        {
+                          "disabled": false,
+                          "type": "any",
+                          "value": "{{sensor_id}}",
+                          "key": "sensor_id",
+                          "description": "(Required) \"The Serial Number of a Sensor, 8 hexadecimal characters long\"\n"
+                        }
+                      ]
+                    },
+                    "method": "GET",
+                    "auth": null
+                  },
+                  "response": [
+                    {
+                      "id": "d1f8ade5-fa2e-4d9a-81f8-f0d573a772c1",
+                      "name": "Detailed information for a single Sensor",
+                      "originalRequest": {
+                        "url": {
+                          "path": [
+                            "api",
+                            "v2",
+                            "sensors",
+                            ":sensor_id"
+                          ],
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "query": [
+                            {
+                              "key": "token",
+                              "value": "{{token}}"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "disabled": false,
+                              "type": "any",
+                              "value": "{{sensor_id}}",
+                              "key": "sensor_id",
+                              "description": "(Required) \"The Serial Number of a Sensor, 8 hexadecimal characters long\"\n"
+                            }
+                          ]
+                        },
+                        "method": "GET",
+                        "body": {}
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "text/plain"
+                        }
+                      ],
+                      "body": "",
+                      "cookie": [],
+                      "_postman_previewlanguage": "text"
+                    },
+                    {
+                      "id": "facab1e6-5003-44a8-b381-fcd1358bf483",
+                      "name": "No valid API token/key values have been provided with the request",
+                      "originalRequest": {
+                        "url": {
+                          "path": [
+                            "api",
+                            "v2",
+                            "sensors",
+                            ":sensor_id"
+                          ],
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "query": [
+                            {
+                              "key": "token",
+                              "value": "{{token}}"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "disabled": false,
+                              "type": "any",
+                              "value": "{{sensor_id}}",
+                              "key": "sensor_id",
+                              "description": "(Required) \"The Serial Number of a Sensor, 8 hexadecimal characters long\"\n"
+                            }
+                          ]
+                        },
+                        "method": "GET",
+                        "body": {}
+                      },
+                      "status": "Unauthorized",
+                      "code": 401,
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "text/plain"
+                        }
+                      ],
+                      "body": "",
+                      "cookie": [],
+                      "_postman_previewlanguage": "text"
+                    }
+                  ],
+                  "event": [
+                    {
+                      "listen": "test",
+                      "script": {
+                        "exec": [
+                          " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test vp-pro-api using AI Type Azure Open AI and AI Model roostgpt-4-32k\n\n\nTest generated for /api/v2/sensors/:sensor_id for http method type get in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n        console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"Detailed information for a single Sensor\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"OK\");\n    });\n\n}\n\nif (pm.response.code == 401){\n    pm.test(\"No valid API token/key values have been provided with the request\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n    });\n\n}\n"
+                        ],
+                        "type": "text/javascript"
+                      }
+                    }
+                  ],
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  }
+                },
+                {
+                  "id": "a2c4755b-8992-4a60-b0c9-dcdbdf560ab9",
+                  "name": "/api/v2/sensors/:sensor_id/readings",
+                  "request": {
+                    "name": "/api/v2/sensors/:sensor_id/readings",
+                    "description": {},
+                    "url": {
+                      "path": [
+                        "api",
+                        "v2",
+                        "sensors",
+                        ":sensor_id",
+                        "readings"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [
+                        {
+                          "disabled": false,
+                          "key": "start",
+                          "value": "{{start}}",
+                          "description": "\"The start datetime for the window of readings\" \\\n\"Readings before this datetime will not be included in the results\" \\\n\"If this parameter is not specified, the most recent reading for each Asset will be provided\"\n"
+                        },
+                        {
+                          "disabled": false,
+                          "key": "end",
+                          "value": "{{end}}",
+                          "description": "\"The end datetime for the window of readings\" \\\n\"Readings after this datetime will not be included in the results\" \\\n\"A valid 'start' parameter must be included if this parameter is used\"\n"
+                        }
+                      ],
+                      "variable": [
+                        {
+                          "disabled": false,
+                          "type": "any",
+                          "value": "{{sensor_id}}",
+                          "key": "sensor_id",
+                          "description": "(Required) \"The Serial Number of a Sensor, 8 hexadecimal characters long\"\n"
+                        }
+                      ]
+                    },
+                    "method": "GET",
+                    "auth": null
+                  },
+                  "response": [
+                    {
+                      "id": "ca3457e0-19cb-4a8c-b20c-706d7ee50a76",
+                      "name": "Readings for a single Sensor",
+                      "originalRequest": {
+                        "url": {
+                          "path": [
+                            "api",
+                            "v2",
+                            "sensors",
+                            ":sensor_id",
+                            "readings"
+                          ],
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "query": [
+                            {
+                              "key": "start",
+                              "value": "{{start}}"
+                            },
+                            {
+                              "key": "end",
+                              "value": "{{end}}"
+                            },
+                            {
+                              "key": "token",
+                              "value": "{{token}}"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "disabled": false,
+                              "type": "any",
+                              "value": "{{sensor_id}}",
+                              "key": "sensor_id",
+                              "description": "(Required) \"The Serial Number of a Sensor, 8 hexadecimal characters long\"\n"
+                            }
+                          ]
+                        },
+                        "method": "GET",
+                        "body": {}
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "text/plain"
+                        }
+                      ],
+                      "body": "",
+                      "cookie": [],
+                      "_postman_previewlanguage": "text"
+                    },
+                    {
+                      "id": "07971794-9ec8-4650-b4f9-373fdb6ad9d9",
+                      "name": "No valid API token/key values have been provided with the request",
+                      "originalRequest": {
+                        "url": {
+                          "path": [
+                            "api",
+                            "v2",
+                            "sensors",
+                            ":sensor_id",
+                            "readings"
+                          ],
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "query": [
+                            {
+                              "key": "start",
+                              "value": "{{start}}"
+                            },
+                            {
+                              "key": "end",
+                              "value": "{{end}}"
+                            },
+                            {
+                              "key": "token",
+                              "value": "{{token}}"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "disabled": false,
+                              "type": "any",
+                              "value": "{{sensor_id}}",
+                              "key": "sensor_id",
+                              "description": "(Required) \"The Serial Number of a Sensor, 8 hexadecimal characters long\"\n"
+                            }
+                          ]
+                        },
+                        "method": "GET",
+                        "body": {}
+                      },
+                      "status": "Unauthorized",
+                      "code": 401,
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "text/plain"
+                        }
+                      ],
+                      "body": "",
+                      "cookie": [],
+                      "_postman_previewlanguage": "text"
+                    }
+                  ],
+                  "event": [
+                    {
+                      "listen": "test",
+                      "script": {
+                        "exec": [
+                          " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test vp-pro-api using AI Type Azure Open AI and AI Model roostgpt-4-32k\n\n\nTest generated for /api/v2/sensors/:sensor_id/readings?start=<dateTime>&end=<dateTime> for http method type get in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n        console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"Readings for a single Sensor\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"OK\");\n      });\n\n    }\n\nif (pm.response.code == 401){\n    pm.test(\"No valid API token/key values have been provided with the request\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n      });\n\n    }\n"
+                        ],
+                        "type": "text/javascript"
+                      }
+                    }
+                  ],
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  }
+                },
+                {
+                  "id": "e2580d73-cc44-4ae3-8b5b-37ba62bd1449",
+                  "name": "channels",
+                  "item": [
+                    {
+                      "id": "586d67ab-fc16-4f3e-9a98-9c7750b78fe7",
+                      "name": "/api/v2/sensors/:sensor_id/channels",
+                      "request": {
+                        "name": "/api/v2/sensors/:sensor_id/channels",
+                        "description": {},
+                        "url": {
+                          "path": [
+                            "api",
+                            "v2",
+                            "sensors",
+                            ":sensor_id",
+                            "channels"
+                          ],
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "query": [],
+                          "variable": [
+                            {
+                              "disabled": false,
+                              "type": "any",
+                              "value": "{{sensor_id}}",
+                              "key": "sensor_id",
+                              "description": "(Required) \"The Serial Number of a Sensor, 8 hexadecimal characters long\"\n"
+                            }
+                          ]
+                        },
+                        "method": "GET",
+                        "auth": null
+                      },
+                      "response": [
+                        {
+                          "id": "899bdc69-4e57-4afc-b51c-75a4dfbdcc9d",
+                          "name": "Available channels for a single Sensor",
+                          "originalRequest": {
+                            "url": {
+                              "path": [
+                                "api",
+                                "v2",
+                                "sensors",
+                                ":sensor_id",
+                                "channels"
+                              ],
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "query": [
+                                {
+                                  "key": "token",
+                                  "value": "{{token}}"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "disabled": false,
+                                  "type": "any",
+                                  "value": "{{sensor_id}}",
+                                  "key": "sensor_id",
+                                  "description": "(Required) \"The Serial Number of a Sensor, 8 hexadecimal characters long\"\n"
+                                }
+                              ]
+                            },
+                            "method": "GET",
+                            "body": {}
+                          },
+                          "status": "OK",
+                          "code": 200,
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "text/plain"
+                            }
+                          ],
+                          "body": "",
+                          "cookie": [],
+                          "_postman_previewlanguage": "text"
+                        },
+                        {
+                          "id": "654356e6-eed5-4936-b549-56bf070d25fe",
+                          "name": "No valid API token/key values have been provided with the request",
+                          "originalRequest": {
+                            "url": {
+                              "path": [
+                                "api",
+                                "v2",
+                                "sensors",
+                                ":sensor_id",
+                                "channels"
+                              ],
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "query": [
+                                {
+                                  "key": "token",
+                                  "value": "{{token}}"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "disabled": false,
+                                  "type": "any",
+                                  "value": "{{sensor_id}}",
+                                  "key": "sensor_id",
+                                  "description": "(Required) \"The Serial Number of a Sensor, 8 hexadecimal characters long\"\n"
+                                }
+                              ]
+                            },
+                            "method": "GET",
+                            "body": {}
+                          },
+                          "status": "Unauthorized",
+                          "code": 401,
+                          "header": [
+                            {
+                              "key": "Content-Type",
+                              "value": "text/plain"
+                            }
+                          ],
+                          "body": "",
+                          "cookie": [],
+                          "_postman_previewlanguage": "text"
+                        }
+                      ],
+                      "event": [
+                        {
+                          "listen": "test",
+                          "script": {
+                            "exec": [
+                              " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test vp-pro-api using AI Type Azure Open AI and AI Model roostgpt-4-32k\n\n\nTest generated for /api/v2/sensors/:sensor_id/channels for http method type get in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n        console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"Available channels for a single Sensor\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"OK\");\n    });\n\n}\n\nif (pm.response.code == 401){\n    pm.test(\"No valid API token/key values have been provided with the request\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n    });\n\n}\n"
+                            ],
+                            "type": "text/javascript"
+                          }
+                        }
+                      ],
+                      "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                      }
+                    },
+                    {
+                      "id": "4531bb7b-0616-478e-9256-716f25fd3acb",
+                      "name": "{channel_id}",
+                      "item": [
+                        {
+                          "id": "a13cca24-0fd4-4047-b55a-e0ba389b5582",
+                          "name": "/api/v2/sensors/:sensor_id/channels/:channel_id",
+                          "request": {
+                            "name": "/api/v2/sensors/:sensor_id/channels/:channel_id",
+                            "description": {},
+                            "url": {
+                              "path": [
+                                "api",
+                                "v2",
+                                "sensors",
+                                ":sensor_id",
+                                "channels",
+                                ":channel_id"
+                              ],
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "query": [],
+                              "variable": [
+                                {
+                                  "disabled": false,
+                                  "type": "any",
+                                  "value": "{{sensor_id}}",
+                                  "key": "sensor_id",
+                                  "description": "(Required) \"The Serial Number of a Sensor, 8 hexadecimal characters long\"\n"
+                                },
+                                {
+                                  "disabled": false,
+                                  "type": "any",
+                                  "value": "{{channel_id}}",
+                                  "key": "channel_id",
+                                  "description": "(Required) \"The identifier of the channel/input for a given Asset or Sensor\" \\\n\"Must be a value between 1 and 3, with 3 always being a binary channel/input\"\n"
+                                }
+                              ]
+                            },
+                            "method": "GET",
+                            "auth": null
+                          },
+                          "response": [
+                            {
+                              "id": "796ffb0b-e33e-49c9-8b77-581a034776e7",
+                              "name": "Detailed information for a single channel/input for a single Sensor",
+                              "originalRequest": {
+                                "url": {
+                                  "path": [
+                                    "api",
+                                    "v2",
+                                    "sensors",
+                                    ":sensor_id",
+                                    "channels",
+                                    ":channel_id"
+                                  ],
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "query": [
+                                    {
+                                      "key": "token",
+                                      "value": "{{token}}"
+                                    }
+                                  ],
+                                  "variable": [
+                                    {
+                                      "disabled": false,
+                                      "type": "any",
+                                      "value": "{{sensor_id}}",
+                                      "key": "sensor_id",
+                                      "description": "(Required) \"The Serial Number of a Sensor, 8 hexadecimal characters long\"\n"
+                                    },
+                                    {
+                                      "disabled": false,
+                                      "type": "any",
+                                      "value": "{{channel_id}}",
+                                      "key": "channel_id",
+                                      "description": "(Required) \"The identifier of the channel/input for a given Asset or Sensor\" \\\n\"Must be a value between 1 and 3, with 3 always being a binary channel/input\"\n"
+                                    }
+                                  ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "text/plain"
+                                }
+                              ],
+                              "body": "",
+                              "cookie": [],
+                              "_postman_previewlanguage": "text"
+                            },
+                            {
+                              "id": "8f8005e2-631e-45a2-8b5c-aafd4d8e0efa",
+                              "name": "No valid API token/key values have been provided with the request",
+                              "originalRequest": {
+                                "url": {
+                                  "path": [
+                                    "api",
+                                    "v2",
+                                    "sensors",
+                                    ":sensor_id",
+                                    "channels",
+                                    ":channel_id"
+                                  ],
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "query": [
+                                    {
+                                      "key": "token",
+                                      "value": "{{token}}"
+                                    }
+                                  ],
+                                  "variable": [
+                                    {
+                                      "disabled": false,
+                                      "type": "any",
+                                      "value": "{{sensor_id}}",
+                                      "key": "sensor_id",
+                                      "description": "(Required) \"The Serial Number of a Sensor, 8 hexadecimal characters long\"\n"
+                                    },
+                                    {
+                                      "disabled": false,
+                                      "type": "any",
+                                      "value": "{{channel_id}}",
+                                      "key": "channel_id",
+                                      "description": "(Required) \"The identifier of the channel/input for a given Asset or Sensor\" \\\n\"Must be a value between 1 and 3, with 3 always being a binary channel/input\"\n"
+                                    }
+                                  ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                              },
+                              "status": "Unauthorized",
+                              "code": 401,
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "text/plain"
+                                }
+                              ],
+                              "body": "",
+                              "cookie": [],
+                              "_postman_previewlanguage": "text"
+                            }
+                          ],
+                          "event": [
+                            {
+                              "listen": "test",
+                              "script": {
+                                "exec": [
+                                  " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test vp-pro-api using AI Type Azure Open AI and AI Model roostgpt-4-32k\n\n\nTest generated for /api/v2/sensors/:sensor_id/channels/:channel_id for http method type get in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n        console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"Detailed information for a single channel/input for a single Sensor\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"OK\");\n    });\n\n}\n\nif (pm.response.code == 401){\n    pm.test(\"No valid API token/key values have been provided with the request\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n    });\n\n}\n"
+                                ],
+                                "type": "text/javascript"
+                              }
+                            }
+                          ],
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          }
+                        },
+                        {
+                          "id": "8d78128a-4f96-48a0-a9d6-3271847722af",
+                          "name": "/api/v2/sensors/:sensor_id/channels/:channel_id/readings",
+                          "request": {
+                            "name": "/api/v2/sensors/:sensor_id/channels/:channel_id/readings",
+                            "description": {},
+                            "url": {
+                              "path": [
+                                "api",
+                                "v2",
+                                "sensors",
+                                ":sensor_id",
+                                "channels",
+                                ":channel_id",
+                                "readings"
+                              ],
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "query": [
+                                {
+                                  "disabled": false,
+                                  "key": "start",
+                                  "value": "{{start}}",
+                                  "description": "\"The start datetime for the window of readings\" \\\n\"Readings before this datetime will not be included in the results\" \\\n\"If this parameter is not specified, the most recent reading for each Asset will be provided\"\n"
+                                },
+                                {
+                                  "disabled": false,
+                                  "key": "end",
+                                  "value": "{{end}}",
+                                  "description": "\"The end datetime for the window of readings\" \\\n\"Readings after this datetime will not be included in the results\" \\\n\"A valid 'start' parameter must be included if this parameter is used\"\n"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "disabled": false,
+                                  "type": "any",
+                                  "value": "{{sensor_id}}",
+                                  "key": "sensor_id",
+                                  "description": "(Required) \"The Serial Number of a Sensor, 8 hexadecimal characters long\"\n"
+                                },
+                                {
+                                  "disabled": false,
+                                  "type": "any",
+                                  "value": "{{channel_id}}",
+                                  "key": "channel_id",
+                                  "description": "(Required) \"The identifier of the channel/input for a given Asset or Sensor\" \\\n\"Must be a value between 1 and 3, with 3 always being a binary channel/input\"\n"
+                                }
+                              ]
+                            },
+                            "method": "GET",
+                            "auth": null
+                          },
+                          "response": [
+                            {
+                              "id": "cb8dd6c2-a930-4745-8746-7d9133b1223b",
+                              "name": "Readings for a single channel/input for a single Sensor",
+                              "originalRequest": {
+                                "url": {
+                                  "path": [
+                                    "api",
+                                    "v2",
+                                    "sensors",
+                                    ":sensor_id",
+                                    "channels",
+                                    ":channel_id",
+                                    "readings"
+                                  ],
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "query": [
+                                    {
+                                      "key": "start",
+                                      "value": "{{start}}"
+                                    },
+                                    {
+                                      "key": "end",
+                                      "value": "{{end}}"
+                                    },
+                                    {
+                                      "key": "token",
+                                      "value": "{{token}}"
+                                    }
+                                  ],
+                                  "variable": [
+                                    {
+                                      "disabled": false,
+                                      "type": "any",
+                                      "value": "{{sensor_id}}",
+                                      "key": "sensor_id",
+                                      "description": "(Required) \"The Serial Number of a Sensor, 8 hexadecimal characters long\"\n"
+                                    },
+                                    {
+                                      "disabled": false,
+                                      "type": "any",
+                                      "value": "{{channel_id}}",
+                                      "key": "channel_id",
+                                      "description": "(Required) \"The identifier of the channel/input for a given Asset or Sensor\" \\\n\"Must be a value between 1 and 3, with 3 always being a binary channel/input\"\n"
+                                    }
+                                  ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "text/plain"
+                                }
+                              ],
+                              "body": "",
+                              "cookie": [],
+                              "_postman_previewlanguage": "text"
+                            },
+                            {
+                              "id": "61a574bf-7e90-49f7-9071-7a37136c8f60",
+                              "name": "No valid API token/key values have been provided with the request",
+                              "originalRequest": {
+                                "url": {
+                                  "path": [
+                                    "api",
+                                    "v2",
+                                    "sensors",
+                                    ":sensor_id",
+                                    "channels",
+                                    ":channel_id",
+                                    "readings"
+                                  ],
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "query": [
+                                    {
+                                      "key": "start",
+                                      "value": "{{start}}"
+                                    },
+                                    {
+                                      "key": "end",
+                                      "value": "{{end}}"
+                                    },
+                                    {
+                                      "key": "token",
+                                      "value": "{{token}}"
+                                    }
+                                  ],
+                                  "variable": [
+                                    {
+                                      "disabled": false,
+                                      "type": "any",
+                                      "value": "{{sensor_id}}",
+                                      "key": "sensor_id",
+                                      "description": "(Required) \"The Serial Number of a Sensor, 8 hexadecimal characters long\"\n"
+                                    },
+                                    {
+                                      "disabled": false,
+                                      "type": "any",
+                                      "value": "{{channel_id}}",
+                                      "key": "channel_id",
+                                      "description": "(Required) \"The identifier of the channel/input for a given Asset or Sensor\" \\\n\"Must be a value between 1 and 3, with 3 always being a binary channel/input\"\n"
+                                    }
+                                  ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                              },
+                              "status": "Unauthorized",
+                              "code": 401,
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "text/plain"
+                                }
+                              ],
+                              "body": "",
+                              "cookie": [],
+                              "_postman_previewlanguage": "text"
+                            }
+                          ],
+                          "event": [
+                            {
+                              "listen": "test",
+                              "script": {
+                                "exec": [
+                                  " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test vp-pro-api using AI Type Azure Open AI and AI Model roostgpt-4-32k\n\n\nTest generated for /api/v2/sensors/:sensor_id/channels/:channel_id/readings?start=<dateTime>&end=<dateTime> for http method type get in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n        console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"Readings for a single channel/input for a single Sensor\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"OK\");\n      });\n\n    }\n\nif (pm.response.code == 401){\n    pm.test(\"No valid API token/key values have been provided with the request\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n      });\n\n    }\n"
+                                ],
+                                "type": "text/javascript"
+                              }
+                            }
+                          ],
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          }
+                        }
+                      ],
+                      "event": []
+                    }
+                  ],
+                  "event": []
+                }
+              ],
+              "event": []
+            }
+          ],
+          "event": []
+        },
+        {
+          "id": "85876b24-97d2-4bf5-a626-d1419d7befa3",
+          "name": "access_points",
+          "item": [
+            {
+              "id": "46c3e4c4-4c39-4e4c-9948-36c5e678e4cd",
+              "name": "/api/v2/access_points",
+              "request": {
+                "name": "/api/v2/access_points",
+                "description": {},
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "access_points"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "disabled": false,
+                      "key": "sort",
+                      "value": "{{sort}}",
+                      "description": "\"The parameter with which to sort the highest level of items returned by the endpoint\"\n"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "page",
+                      "value": "{{page}}",
+                      "description": "\"The page number of results to be loaded, e.g. page 3 of 5\" \\\n\"A valid 'per' parameter must be included if this parameter is used\"\n"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "per",
+                      "value": "{{per}}",
+                      "description": "\"The number of results to load per page, e.g. 25 per page\" \\\n\"A valid 'page' parameter must be included if this parameter is used\"\n"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "name",
+                      "value": "{{name}}",
+                      "description": "\"A string to filter returned APs on via their 'name' attribute\" \\\n\"e.g. a value of 'abc' would return all APs with 'abc' in their name\"\n"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "serial_number",
+                      "value": "{{serial_number}}",
+                      "description": "\"A string to filter returned APs on via their 'serial_number' attribute\" \\\n\"e.g. a value of 'abc' would return all APs with 'abc' in their serial number\"\n"
+                    },
+                    {
+                      "disabled": false,
+                      "key": "ip_address",
+                      "value": "{{ip_address}}",
+                      "description": "\"A string to filter returned APs on via their 'ip_address' attribute\" \\\n\"e.g. a value of 'abc' would return all APs with 'abc' in their IP address\"\n"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "auth": null
+              },
+              "response": [
+                {
+                  "id": "0408ec4b-c1d4-4abb-8d35-5f9077aa7355",
+                  "name": "All Access Points within the system",
+                  "originalRequest": {
+                    "url": {
+                      "path": [
+                        "api",
+                        "v2",
+                        "access_points"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [
+                        {
+                          "key": "sort",
+                          "value": "{{sort}}"
+                        },
+                        {
+                          "key": "page",
+                          "value": "{{page}}"
+                        },
+                        {
+                          "key": "per",
+                          "value": "{{per}}"
+                        },
+                        {
+                          "key": "name",
+                          "value": "{{name}}"
+                        },
+                        {
+                          "key": "serial_number",
+                          "value": "{{serial_number}}"
+                        },
+                        {
+                          "key": "ip_address",
+                          "value": "{{ip_address}}"
+                        },
+                        {
+                          "key": "token",
+                          "value": "{{token}}"
+                        }
+                      ],
+                      "variable": []
+                    },
+                    "method": "GET",
+                    "body": {}
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "text/plain"
+                    }
+                  ],
+                  "body": "",
+                  "cookie": [],
+                  "_postman_previewlanguage": "text"
+                },
+                {
+                  "id": "147ef384-6d8a-4223-abc9-7e3093b86322",
+                  "name": "No valid API token/key values have been provided with the request",
+                  "originalRequest": {
+                    "url": {
+                      "path": [
+                        "api",
+                        "v2",
+                        "access_points"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [
+                        {
+                          "key": "sort",
+                          "value": "{{sort}}"
+                        },
+                        {
+                          "key": "page",
+                          "value": "{{page}}"
+                        },
+                        {
+                          "key": "per",
+                          "value": "{{per}}"
+                        },
+                        {
+                          "key": "name",
+                          "value": "{{name}}"
+                        },
+                        {
+                          "key": "serial_number",
+                          "value": "{{serial_number}}"
+                        },
+                        {
+                          "key": "ip_address",
+                          "value": "{{ip_address}}"
+                        },
+                        {
+                          "key": "token",
+                          "value": "{{token}}"
+                        }
+                      ],
+                      "variable": []
+                    },
+                    "method": "GET",
+                    "body": {}
+                  },
+                  "status": "Unauthorized",
+                  "code": 401,
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "text/plain"
+                    }
+                  ],
+                  "body": "",
+                  "cookie": [],
+                  "_postman_previewlanguage": "text"
+                }
+              ],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test vp-pro-api using AI Type Azure Open AI and AI Model roostgpt-4-32k\n\n\nTest generated for /api/v2/access_points?sort=<string>&page=<integer>&per=<integer>&name=<string>&serial_number=<string>&ip_address=<string> for http method type get in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n        console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"All Access Points within the system\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"OK\");\n      });\n\n    }\n\nif (pm.response.code == 401){\n    pm.test(\"No valid API token/key values have been provided with the request\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n      });\n\n    }\n"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              }
+            },
+            {
+              "id": "af2daa20-84f3-4a61-8ab5-6d619f325d85",
+              "name": "/api/v2/access_points/:access_point_id",
+              "request": {
+                "name": "/api/v2/access_points/:access_point_id",
+                "description": {},
+                "url": {
+                  "path": [
+                    "api",
+                    "v2",
+                    "access_points",
+                    ":access_point_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "{{access_point_id}}",
+                      "key": "access_point_id",
+                      "description": "(Required) \"The Serial Number of an Access Point, 8 hexadecimal characters long\"\n"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "auth": null
+              },
+              "response": [
+                {
+                  "id": "d3d708ce-f4ad-434e-87e4-d129adf9ab2c",
+                  "name": "Detailed information for a single Access Point",
+                  "originalRequest": {
+                    "url": {
+                      "path": [
+                        "api",
+                        "v2",
+                        "access_points",
+                        ":access_point_id"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [
+                        {
+                          "key": "token",
+                          "value": "{{token}}"
+                        }
+                      ],
+                      "variable": [
+                        {
+                          "disabled": false,
+                          "type": "any",
+                          "value": "{{access_point_id}}",
+                          "key": "access_point_id",
+                          "description": "(Required) \"The Serial Number of an Access Point, 8 hexadecimal characters long\"\n"
+                        }
+                      ]
+                    },
+                    "method": "GET",
+                    "body": {}
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "text/plain"
+                    }
+                  ],
+                  "body": "",
+                  "cookie": [],
+                  "_postman_previewlanguage": "text"
+                },
+                {
+                  "id": "456159ef-c99a-42ac-9912-107b04d1adb0",
+                  "name": "No valid API token/key values have been provided with the request",
+                  "originalRequest": {
+                    "url": {
+                      "path": [
+                        "api",
+                        "v2",
+                        "access_points",
+                        ":access_point_id"
+                      ],
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "query": [
+                        {
+                          "key": "token",
+                          "value": "{{token}}"
+                        }
+                      ],
+                      "variable": [
+                        {
+                          "disabled": false,
+                          "type": "any",
+                          "value": "{{access_point_id}}",
+                          "key": "access_point_id",
+                          "description": "(Required) \"The Serial Number of an Access Point, 8 hexadecimal characters long\"\n"
+                        }
+                      ]
+                    },
+                    "method": "GET",
+                    "body": {}
+                  },
+                  "status": "Unauthorized",
+                  "code": 401,
+                  "header": [
+                    {
+                      "key": "Content-Type",
+                      "value": "text/plain"
+                    }
+                  ],
+                  "body": "",
+                  "cookie": [],
+                  "_postman_previewlanguage": "text"
+                }
+              ],
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      " \n// ********RoostGPT********\n/*\nTest generated by RoostGPT for test vp-pro-api using AI Type Azure Open AI and AI Model roostgpt-4-32k\n\n\nTest generated for /api/v2/access_points/:access_point_id for http method type get in postman framework\n\n*/\n\n// ********RoostGPT********\n\n\nconst ld = require('lodash');\nlet responseData;\nconst contentType = pm.response.headers.get('Content-Type');\nif(contentType === \"application/xml\"){\n    var parseString = require('xml2js').parseString;\n    parseString(pm.response.body, function (err,result) {\n      if (err) {\n        console.error('Error parsing XML:', err);\n      } else {\n        responseData = result;  \n      }\n    });\n} else{\n    responseData = pm.response.json();\n}\nif (pm.variables.get(\"statusCode\")) {\n  // Compare the statusCode variable with the response code for assertion\n    pm.expect(parseInt(pm.variables.get(\"statusCode\"))).to.be.equal(pm.response.code);\n}\n\n// let responseTime = 800\n// pm.expect(pm.response.responseTime).to.be.below(responseTime);\n\nif (pm.response.code == 200){\n    pm.test(\"Detailed information for a single Access Point\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"OK\");\n    });\n\n}\n\nif (pm.response.code == 401){\n    pm.test(\"No valid API token/key values have been provided with the request\", function () {\n        pm.expect(pm.response.status).to.be.eql(\"Unauthorized\");\n    });\n\n}\n"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              }
+            }
+          ],
+          "event": []
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://localhost",
+      "key": "baseUrl"
+    },
+    {
+      "type": "integer",
+      "value": 200,
+      "key": "statusCode"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "token"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "395b2504-571f-4d31-bdda-7240138590f4",
+    "name": "VP_Pro_API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "API used to expose Sensor and Asset information to authorized consumers",
+      "type": "text/plain"
+    }
+  }
+}

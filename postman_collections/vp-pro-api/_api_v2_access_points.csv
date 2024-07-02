@@ -1,0 +1,6 @@
+sort,page,per,name,serial_number,ip_address,statusCode,scenario
+1,2,1000,"deviceA",9901,"192.168.0.1",200,"All Access Points within the system"
+2,1,9999,"deviceB",8802,"192.168.0.2",200,"All Access Points within the system"
+1,2,-1,"deviceC",0,"192.168.0.3",401,"No valid API token/key values have been provided with the request"
+-2,1,-2,"deviceD",-1,"192.168.0.4",401,"No valid API token/key values have been provided with the request"
+0,2,1000,"deviceE",-1,"192.168.0.5",401,"No valid API token/key values have been provided with the request"

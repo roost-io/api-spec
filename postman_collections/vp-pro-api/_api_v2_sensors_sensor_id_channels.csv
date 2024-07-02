@@ -1,0 +1,11 @@
+sensor_id,statusCode,scenario
+"string1",200,"Available channels for a single Sensor"
+"string2",200,"Available channels for a single Sensor"
+"string3",200,"Available channels for a single Sensor"
+"string4",200,"Available channels for a single Sensor"
+"string5",200,"Available channels for a single Sensor"
+"string6",401,"No valid API token/key values have been provided with the request"
+"string7",401,"No valid API token/key values have been provided with the request"
+"string8",401,"No valid API token/key values have been provided with the request"
+"string9",401,"No valid API token/key values have been provided with the request"
+"string10",401,"No valid API token/key values have been provided with the request"
