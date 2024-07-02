@@ -1,0 +1,5 @@
+sort,page,per,statusCode,scenario
+1,2,"1000",200,"All Sensors in the system"
+2,1,"9999",200,"All Sensors in the system"
+1,2,"-1",401,"No valid API token/key values have been provided with the request"
+2,1,"0",401,"No valid API token/key values have been provided with the request"

@@ -1,0 +1,8 @@
+asset_id,statusCode,scenario
+1,200,"Available channels/inputs for a single Asset"
+2,200,"Available channels/inputs for a single Asset"
+1000,200,"Available channels/inputs for a single Asset"
+9999,200,"Available channels/inputs for a single Asset"
+0,401,"No valid API token/key values have been provided with the request"
+-1,401,"No valid API token/key values have been provided with the request"
+-2,401,"No valid API token/key values have been provided with the request"

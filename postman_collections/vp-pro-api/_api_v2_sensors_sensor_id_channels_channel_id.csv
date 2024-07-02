@@ -1,0 +1,8 @@
+sensor_id,channel_id,statusCode,scenario
+'s1',1,200,'Detailed information for a single channel/input for a single Sensor'
+'s2',2,200,'Detailed information for a single channel/input for a single Sensor'
+'s3',1000,200,'Detailed information for a single channel/input for a single Sensor'
+'s4',9999,200,'Detailed information for a single channel/input for a single Sensor'
+'s5',0,401,'No valid API token/key values have been provided with the request'
+'s6',-1,401,'No valid API token/key values have been provided with the request'
+'s7',-2,401,'No valid API token/key values have been provided with the request'

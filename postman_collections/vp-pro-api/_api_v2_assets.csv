@@ -1,0 +1,5 @@
+sort,page,per,name,tag,state,statusCode,scenario
+asc,1,10,John,Doe,Active,200,"All Assets in the system with an Active or Distabled status"
+desc,2,20,Jane,Doe,Disabled,200,"All Assets in the system with an Active or Distabled status"
+asc,3,15,Michael,Smith,Active,401,"No valid API token/key values have been provided with the request"
+desc,4,30,Susan,Smith,Disabled,401,"No valid API token/key values have been provided with the request"

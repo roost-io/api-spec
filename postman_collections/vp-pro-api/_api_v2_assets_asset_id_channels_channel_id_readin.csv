@@ -1,0 +1,8 @@
+start,end,asset_id,channel_id,statusCode,scenario
+2021-01-01,2021-12-31,1,1,200,Readings for a single channel/input for a single Asset
+2021-02-01,2021-12-31,2,2,200,Readings for a single channel/input for a single Asset
+2021-03-01,2021-12-31,1000,1000,200,Readings for a single channel/input for a single Asset
+2021-04-01,2021-12-31,9999,9999,200,Readings for a single channel/input for a single Asset
+2021-05-01,2021-12-31,0,0,401,"No valid API token/key values have been provided with the request"
+2021-06-01,2021-12-31,-1,-1,401,"No valid API token/key values have been provided with the request"
+2021-07-01,2021-12-31,-2,-2,401,"No valid API token/key values have been provided with the request"

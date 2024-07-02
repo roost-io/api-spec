@@ -1,0 +1,8 @@
+start,end,asset_id,statusCode,scenario
+05/01/2022,06/01/2022,1,200,"Readings for a single Asset"
+07/01/2022,08/01/2022,2,200,"Readings for a single Asset"
+06/02/2022,07/02/2022,1000,200,"Readings for a single Asset"
+08/02/2022,09/02/2022,9999,200,"Readings for a single Asset"
+10/02/2022,11/02/2022,0,401,"No valid API token/key values have been provided with the request"
+11/03/2022,12/03/2022,-1,401,"No valid API token/key values have been provided with the request"
+13/03/2022,14/03/2022,-2,401,"No valid API token/key values have been provided with the request"

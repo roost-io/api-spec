@@ -1,0 +1,8 @@
+sensor_id,statusCode,scenario
+"S1",200,"Detailed information for a single Sensor"
+"S2",401,"No valid API token/key values have been provided with the request"
+"S3",1000,"random_scenario"
+"S4",9999,"random_scenario"
+"S5",0,"random_scenario"
+"S6",-1,"random_scenario"
+"S7",-2,"random_scenario"

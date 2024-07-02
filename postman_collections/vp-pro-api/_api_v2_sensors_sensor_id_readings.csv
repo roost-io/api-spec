@@ -1,0 +1,9 @@
+start,end,sensor_id,statusCode,scenario
+01-01-2022,31-01-2022,"SENSOR001",200,"Readings for a single Sensor"
+01-02-2022,28-02-2022,"SENSOR002",200,"Readings for a single Sensor"
+01-03-2022,31-03-2022,"SENSOR003",401,"No valid API token/key values have been provided with the request"
+01-04-2022,30-04-2022,"SENSOR004",401,"No valid API token/key values have been provided with the request"
+01-05-2022,31-05-2022,"SENSOR005",200,"Readings for a single Sensor"
+01-06-2022,30-06-2022,"SENSOR006",200,"Readings for a single Sensor"
+01-07-2022,31-07-2022,"SENSOR007",401,"No valid API token/key values have been provided with the request"
+01-08-2022,31-08-2022,"SENSOR008",401,"No valid API token/key values have been provided with the request"
