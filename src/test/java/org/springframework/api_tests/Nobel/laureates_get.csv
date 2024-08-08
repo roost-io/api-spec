@@ -1,0 +1,2 @@
+offset,limit,sort,ID,name,gender,motivation,affiliation,residence,birthDate,birthDateTo,deathDate,deathDateTo,foundedDate,birthCity,birthCountry,birthContinent,deathCity,deathCountry,deathContinent,foundedCity,foundedCountry,foundedContinent,HeadquartersCity,HeadquartersCountry,HeadquartersContinent,nobelPrizeYear,yearTo,nobelPrizeCategory,format,csvLang
+"1","10","asc","1","John","male","test","test","test",1990,2000,2010,2020,2020,"test","test","test","test","test","test","test","test","test","test","test","test","2022","2022","test","json","en"
