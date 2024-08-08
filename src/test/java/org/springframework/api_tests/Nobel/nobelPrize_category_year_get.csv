@@ -1,0 +1,6 @@
+category,year,statusCode,categoryNameEN,categoryNameSE,categoryFullNameEN,categoryFullNameSE
+"physics","2015","200","Physics","Fysik","Physics","Fysik"
+"chemistry","2010","200","Chemistry","Kemi","Chemistry","Kemi"
+"invalid","2015","400","Physics","Fysik","Physics","Fysik"
+"physics","1800","400","Chemistry","Kemi","Chemistry","Kemi"
+"physics","2025","404","Physics","Fysik","Physics","Fysik"

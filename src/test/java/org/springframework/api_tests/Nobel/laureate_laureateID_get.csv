@@ -1,0 +1,7 @@
+laureateID,statusCode,code,message
+"1","200","",""
+"0","400","","Bad Request"
+"999999","404","","Not Found"
+"abc","422","","Unprocessable Entity"
+"1.5","422","","Unprocessable Entity"
+"null","422","","Unprocessable Entity"
