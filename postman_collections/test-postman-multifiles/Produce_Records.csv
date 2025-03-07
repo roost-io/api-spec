@@ -1,0 +1,11 @@
+cluster_id,topic_name,partition_id,headers,type,value.type,timestamp,statusCode,scenario
+cluster-1,topic-1,1,[]^|"BINARY"^|"JSON"^|"2021-02-05T19:14:42Z",200,"The response containing a delivery report for a record produced to a topic. In streaming mode, for each record sent, a separate delivery report will be returned, in the same order, each with its own error_code."
+"cluster-2","random-topic",2,[],"BINARY","XML","2022-01-15T15:32:42Z",400,"Indicates a bad request error. It could be caused by an unexpected request body format or other forms of request validation failure."
+"cluster-3","new-topic",3,[],"TEXT","HTML","2021-04-21T09:30:42Z",401,"Indicates a client authentication error. Kafka authentication failures will contain error code 40101 in the response body."
+"cluster-4","old-topic",4,[],"XML","TEXT","2020-12-31T23:59:59Z",403,"Indicates a client authorization error. Kafka authorization failures will contain error code 40301 in the response body."
+"cluster-5","unknown-topic",5,[],"HTML","BINARY","2023-07-01T12:30:00Z",404,"Indicates attempted access to an unreachable or non-existing resource like e.g. an unknown topic or partition. GET requests to endpoints not allowed in the accesslists will also result in this response."
+"cluster-6","non-existing-topic",0,[],"JSON","TEXT","2024-02-29T00:00:00Z",413,"This implies the client is sending a request payload that is larger than the maximum message size the server can accept."
+"cluster-7","test-topic",6,[],"XML","JSON","2021-11-01T11:11:11Z",415,"This implies the client is sending the request payload format in an unsupported format."
+"cluster-8","default-topic",7,[],"TEXT","XML","2021-04-04T04:04:04Z",422,"Indicates a bad request error. It could be caused by an unexpected request body format or other forms of request validation failure."
+"cluster-9","debug-topic",9,[],"HTML","BINARY","2025-05-05T05:05:05Z",429,"Indicates that a rate limit threshold has been reached, and the client should retry again later."
+"cluster-10","release-topic",10,[],"BINARY","HTML","2022-02-02T02:02:02Z",500,"A server-side problem that might not be addressable from the client side. Retriable Kafka errors will contain error code 50003 in the response body."

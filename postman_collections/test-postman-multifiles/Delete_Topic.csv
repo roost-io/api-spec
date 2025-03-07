@@ -1,0 +1,8 @@
+cluster_id,topic_name,statusCode,scenario
+"cluster-1","topicA",204,"No Content"
+"cluster-2","topicB",400,"Indicates a bad request error. It could be caused by an unexpected request body format or other forms of request validation failure."
+"cluster-3","topicC",401,"Indicates a client authentication error. Kafka authentication failures will contain error code 40101 in the response body."
+"cluster-4","topicD",403,"Indicates a client authorization error. Kafka authorization failures will contain error code 40301 in the response body."
+"cluster-5","topicE",404,"Indicates attempted access to an unreachable or non-existing resource like e.g. an unknown topic or partition. GET requests to endpoints not allowed in the accesslists will also result in this response."
+"cluster-6","topicF",429,"Indicates that a rate limit threshold has been reached, and the client should retry again later."
+"cluster-7","topicG",500,"A server-side problem that might not be addressable from the client side. Retriable Kafka errors will contain error code 50003 in the response body."
