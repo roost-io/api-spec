@@ -1,0 +1,8 @@
+cluster_id,topic_name,partitions_count,replication_factor,configs,validate_only,statusCode,scenario
+"cluster-1","topic-X",1,3,["config1", "config2", "config3"],true,200,"The created topic."
+"cluster-2","topic-Y",2,3,["config4", "config5", "config6"],false,201,"The created topic."
+"cluster-3","topic-Z",1,4,["config7", "config8", "config9"],true,400,"Indicates a bad request error. It could be caused by an unexpected request body format or other forms of request validation failure."
+"cluster-4","topic-A",3,2,["config10", "config11", "config12"],false,401,"Indicates a client authentication error. Kafka authentication failures will contain error code 40101 in the response body."
+"cluster-5","topic-B",2,4,["config13", "config14", "config15"],true,403,"Indicates a client authorization error. Kafka authorization failures will contain error code 40301 in the response body."
+"cluster-6","topic-C",1,3,["config16", "config17", "config18"],false,429,"Indicates that a rate limit threshold has been reached, and the client should retry again later."
+"cluster-7","topic-D",2,2,["config19", "config20", "config21"],true,500,"A server-side problem that might not be addressable from the client side. Retriable Kafka errors will contain error code 50003 in the response body."
