@@ -1,0 +1,171 @@
+openapi: 3.0.0
+info:
+  title: Online Trading Platform API
+  version: 1.0.0
+  description: API specification for online trading platform
+
+servers:
+  - url: https://api.tradingplatform.com
+    description: Production server
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    Registration:
+      type: object
+      properties:
+        email:
+          type: string
+          format: email
+        password:
+          type: string
+          minLength: 8
+        mobile:
+          type: string
+          pattern: '^\+[0-9]{10,}$'
+    
+    DepositRequest:
+      type: object
+      properties:
+        amount:
+          type: number
+        paymentMethod:
+          type: string
+          enum: [UPI]
+        upiId:
+          type: string
+
+    OrderRequest:
+      type: object
+      properties:
+        symbol:
+          type: string
+        quantity:
+          type: integer
+        orderType:
+          type: string
+          enum: [MARKET, LIMIT]
+        transactionType:
+          type: string
+          enum: [BUY, SELL]
+        price:
+          type: number
+
+paths:
+  /api/v1/registration:
+    post:
+      summary: Register new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Registration'
+      responses:
+        '201':
+          description: Account created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  userId:
+                    type: string
+        '409':
+          description: User already exists
+
+  /api/v1/kyc/documents:
+    post:
+      security:
+        - bearerAuth: []
+      summary: Upload KYC documents
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                docType:
+                  type: string
+                file:
+                  type: string
+                  format: binary
+      responses:
+        '200':
+          description: Document uploaded successfully
+        '401':
+          description: Unauthorized access
+
+  /api/v1/funds/deposit:
+    post:
+      security:
+        - bearerAuth: []
+      summary: Deposit funds
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DepositRequest'
+      responses:
+        '200':
+          description: Transaction successful
+        '401':
+          description: Unauthorized access
+
+  /api/v1/trading/order:
+    post:
+      security:
+        - bearerAuth: []
+      summary: Place trading order
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OrderRequest'
+      responses:
+        '200':
+          description: Order placed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  orderStatus:
+                    type: string
+                  circuitBreakerStatus:
+                    type: string
+        '401':
+          description: Unauthorized access
+
+  /api/v1/trading/quotes:
+    get:
+      security:
+        - bearerAuth: []
+      summary: Get market quotes
+      responses:
+        '200':
+          description: Successful response
+        '401':
+          description: Unauthorized access
+
+  /api/v1/user/profile:
+    get:
+      security:
+        - bearerAuth: []
+      summary: Get user profile
+      responses:
+        '200':
+          description: Successful response
+        '401':
+          description: Unauthorized access
