@@ -1,0 +1,150 @@
+ scenarios for the online trading platform:
+
+# FUNCTIONAL TEST CASES
+
+## 1. User Onboarding and KYC
+* Registration Flow
+  - Valid email/mobile registration
+    ```
+    Input: Valid email/phone
+    Expected: Account created successfully
+    ```
+  - Invalid registration attempts
+    ```
+    Input: Invalid email format, existing user
+    Expected: Appropriate error messages
+    ```
+  - Email/Mobile verification
+    ```
+    Input: OTP verification
+    Expected: Verification success/failure messages
+    ```
+
+* KYC Verification
+  - Document Upload
+    ```
+    Input: Valid documents (PAN, Aadhar, etc.)
+    Expected: Upload success confirmation
+    ```
+  - Document Validation
+    ```
+    Input: Various document formats (PDF, JPG, PNG)
+    Expected: Format validation messages
+    ```
+
+## 2. Funds Management
+* Deposit Testing
+  - Multiple payment methods
+    ```
+    Input: UPI, Netbanking, IMPS transactions
+    Expected: Successful credit to trading account
+    ```
+  - Failed Transactions
+    ```
+    Input: Invalid bank details, insufficient funds
+    Expected: Proper error handling
+    ```
+
+* Withdrawal Testing
+  - Valid withdrawals
+    ```
+    Input: Amount within available balance
+    Expected: Successful transfer to linked bank
+    ```
+  - Invalid attempts
+    ```
+    Input: Amount exceeding balance
+    Expected: Rejection with proper message
+    ```
+
+## 3. Trading Functionality
+* Order Placement
+  - Market Orders
+    ```
+    Input: Buy/Sell at market price
+    Expected: Immediate execution
+    ```
+  - Limit Orders
+    ```
+    Input: Price limits for buy/sell
+    Expected: Order in pending until price matches
+    ```
+
+* Position Management
+  - Position Square-off
+    ```
+    Input: Open position closure
+    Expected: Position closed at market price
+    ```
+  - Margin Calculation
+    ```
+    Input: Leverage trading scenarios
+    Expected: Accurate margin requirements
+    ```
+
+# NON-FUNCTIONAL TEST CASES
+
+## 1. Performance Testing
+* Load Testing
+  ```
+  Scenario: Peak market hours simulation
+  Expected: System handles 1000+ concurrent users
+  ```
+* Response Time
+  ```
+  Scenario: Order placement latency
+  Expected: < 2 seconds for data refresh
+  ```
+
+## 2. Security Testing
+* Authentication
+  ```
+  Scenario: 2FA implementation
+  Expected: Successful verification for critical operations
+  ```
+* Data Encryption
+  ```
+  Scenario: Data transmission
+  Expected: End-to-end encryption verification
+  ```
+
+## 3. Reliability Testing
+* Uptime Monitoring
+  ```
+  Scenario: 24/7 operation
+  Expected: 99.9% availability
+  ```
+* Disaster Recovery
+  ```
+  Scenario: System failure simulation
+  Expected: Quick recovery with data integrity
+  ```
+
+## 4. Usability Testing
+* Cross-platform Compatibility
+  ```
+  Scenario: Multiple device access
+  Expected: Consistent UI/UX across platforms
+  ```
+* Navigation Testing
+  ```
+  Scenario: Order placement workflow
+  Expected: Maximum 3 clicks to place order
+  ```
+
+## Edge Cases
+* Network Interruption
+  ```
+  Scenario: Connection loss during order placement
+  Expected: Proper order status handling
+  ```
+* Concurrent Operations
+  ```
+  Scenario: Multiple orders/fund transfers
+  Expected: Accurate transaction processing
+  ```
+* Market Volatility
+  ```
+  Scenario: High volume trading periods
+  Expected: System stability maintained
+  ```
