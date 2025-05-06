@@ -1,0 +1,2 @@
+offset,limit,sort,ID,name,gender,motivation,affiliation,residence,birthDate,birthDateTo,deathDate,deathDateTo
+"1","10","asc","1","Nelson","male","Peace","society","USA","1918","2000","2000","2050"
