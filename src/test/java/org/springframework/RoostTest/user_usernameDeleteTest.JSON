@@ -1,0 +1,262 @@
+[
+  {
+    "id": 1,
+    "category": {
+      "id": 101,
+      "name": "User Management"
+    },
+    "name": "Delete Existing User Test",
+    "photoUrls": ["https://example.com/api/docs"],
+    "tags": [
+      {
+        "id": 1,
+        "name": "valid username"
+      },
+      {
+        "id": 2,
+        "name": "successful operation"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/user/testuser",
+      "headers": {
+        "Authorization": "Bearer validToken123"
+      },
+      "body": null
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 2,
+    "category": {
+      "id": 102,
+      "name": "User Management"
+    },
+    "name": "Delete Non-Existent User Test",
+    "photoUrls": [],
+    "tags": [
+      {
+        "id": 3,
+        "name": "nonexistent username"
+      },
+      {
+        "id": 4,
+        "name": "error handling"
+      }
+    ],
+    "status": "pending",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/user/nonexistentuser",
+      "headers": {
+        "Authorization": "Bearer validToken123"
+      },
+      "body": null
+    },
+    "statusCode": 404
+  },
+  {
+    "id": 3,
+    "category": {
+      "id": 103,
+      "name": "Validation"
+    },
+    "name": "Delete Invalid Username Test",
+    "photoUrls": ["https://example.com/api/docs", "invalidLink"],
+    "tags": [
+      {
+        "id": 5,
+        "name": "invalid username format"
+      }
+    ],
+    "status": "sold",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/user/123!@#",
+      "headers": {
+        "Authorization": "Bearer validToken123"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 4,
+    "category": {
+      "id": 104,
+      "name": "Error Handling"
+    },
+    "name": null,
+    "photoUrls": [],
+    "tags": [
+      {
+        "id": 6,
+        "name": "empty username"
+      }
+    ],
+    "status": "invalid",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/user/",
+      "headers": {
+        "Authorization": "Bearer validToken123"
+      },
+      "body": null
+    },
+    "statusCode": 404
+  },
+  {
+    "id": 5,
+    "category": {
+      "id": 105,
+      "name": "Validation"
+    },
+    "name": "Delete Null Username Test",
+    "photoUrls": ["https://example.com/api/docs"],
+    "tags": [
+      {
+        "id": 7,
+        "name": "null username"
+      },
+      {
+        "id": 8,
+        "name": "error handling"
+      }
+    ],
+    "status": "pending",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/user/null",
+      "headers": {
+        "Authorization": "Bearer validToken123"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 6,
+    "category": {
+      "id": 106,
+      "name": "Validation"
+    },
+    "name": "Delete Username with Leading Spaces Test",
+    "photoUrls": ["https://example.com/api/docs"],
+    "tags": [
+      {
+        "id": 9,
+        "name": "leading spaces"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/user/%20testuser",
+      "headers": {
+        "Authorization": "Bearer validToken123"
+      },
+      "body": null
+    },
+    "statusCode": 404
+  },
+  {
+    "id": 7,
+    "category": {
+      "id": 107,
+      "name": "Validation"
+    },
+    "name": "Delete Username with Trailing Spaces Test",
+    "photoUrls": ["https://example.com/api/docs"],
+    "tags": [
+      {
+        "id": 10,
+        "name": "trailing spaces"
+      }
+    ],
+    "status": "sold",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/user/testuser%20",
+      "headers": {
+        "Authorization": "Bearer validToken123"
+      },
+      "body": null
+    },
+    "statusCode": 404
+  },
+  {
+    "id": 8,
+    "category": {
+      "id": 108,
+      "name": "Boundary Testing"
+    },
+    "name": "Delete Max Length Username Test",
+    "photoUrls": ["https://example.com/api/docs"],
+    "tags": [
+      {
+        "id": 11,
+        "name": "boundary testing"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/user/" + "a".repeat(256),
+      "headers": {
+        "Authorization": "Bearer validToken123"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 9,
+    "category": {
+      "id": 109,
+      "name": "Validation"
+    },
+    "name": "Delete Username with Special Characters Test",
+    "photoUrls": ["https://example.com/api/docs"],
+    "tags": [
+      {
+        "id": 12,
+        "name": "special characters"
+      }
+    ],
+    "status": "pending",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/user/@special$chars!",
+      "headers": {
+        "Authorization": "Bearer validToken123"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 10,
+    "category": {
+      "id": 110,
+      "name": "Authentication"
+    },
+    "name": "Delete Without Authentication Test",
+    "photoUrls": [],
+    "tags": [
+      {
+        "id": 13,
+        "name": "missing authentication"
+      }
+    ],
+    "status": "invalid",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/user/testuser",
+      "headers": {},
+      "body": null
+    },
+    "statusCode": 401
+  }
+]

@@ -1,0 +1,11 @@
+api_key^|^petId^|^RequestBody^|^statusCode
+ABC123XYZ^|^101^|^{"action":"update","timestamp":"2023-10-01T10:00:00Z","update":{"status":"delivered","location":"shelter"}}^|^400
+DEF456UVW^|^102^|^{"action":"create","timestamp":"2023-10-02T12:00:00Z","pet":{"type":"dog","name":"Buddy","age":3}}^|^404
+GHI789RST^|^103^|^{"action":"delete","timestamp":"2023-10-03T14:30:00Z","petId":103}^|^400
+JKL012DEF^|^104^|^{"action":"update","timestamp":"2023-10-04T09:45:00Z","update":{"status":"adopted","owner":"Jane Doe"}}^|^404
+MNO345ABC^|^105^|^{"action":"create","timestamp":"2023-10-05T11:15:00Z","pet":{"type":"cat","name":"Whiskers","age":2}}^|^400
+PQR678UVW^|^106^|^{"action":"delete","timestamp":"2023-10-06T16:20:00Z","petId":106}^|^404
+STU901XYZ^|^107^|^{"action":"update","timestamp":"2023-10-07T18:00:00Z","update":{"status":"found","location":"city center"}}^|^400
+VWX234RST^|^108^|^{"action":"create","timestamp":"2023-10-08T20:05:00Z","pet":{"type":"rabbit","name":"Hopper","age":1}}^|^404
+YZA567DEF^|^109^|^{"action":"delete","timestamp":"2023-10-09T22:10:00Z","petId":109}^|^400
+BCD890ABC^|^110^|^{"action":"update","timestamp":"2023-10-10T08:55:00Z","update":{"status":"lost","location":"park"}}^|^404

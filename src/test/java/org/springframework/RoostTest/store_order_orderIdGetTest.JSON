@@ -1,0 +1,252 @@
+[
+  {
+    "id": 1,
+    "category": {
+      "id": 101,
+      "name": "Orders"
+    },
+    "name": "Retrieve Valid Order",
+    "photoUrls": [],
+    "tags": [
+      {
+        "id": 1,
+        "name": "ValidOrder"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/store/order/5",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": null
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 2,
+    "category": {
+      "id": 102,
+      "name": "Boundary Testing"
+    },
+    "name": "Upper Boundary Order",
+    "photoUrls": [],
+    "tags": [
+      {
+        "id": 2,
+        "name": "BoundaryTest"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/store/order/10",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": null
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 3,
+    "category": {
+      "id": 103,
+      "name": "Boundary Testing"
+    },
+    "name": "Lower Boundary Order",
+    "photoUrls": [],
+    "tags": [
+      {
+        "id": 3,
+        "name": "BoundaryTest"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/store/order/1",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": null
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 4,
+    "category": {
+      "id": 104,
+      "name": "Invalid Data"
+    },
+    "name": "Order ID Above Maximum",
+    "photoUrls": [],
+    "tags": [
+      {
+        "id": 4,
+        "name": "InvalidOrder"
+      }
+    ],
+    "status": "pending",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/store/order/11",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 5,
+    "category": {
+      "id": 105,
+      "name": "Invalid Data"
+    },
+    "name": "Order ID Below Minimum",
+    "photoUrls": [],
+    "tags": [
+      {
+        "id": 5,
+        "name": "InvalidOrder"
+      }
+    ],
+    "status": "sold",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/store/order/0",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 6,
+    "category": {
+      "id": 106,
+      "name": "Invalid Data Types"
+    },
+    "name": "Order ID as String",
+    "photoUrls": [],
+    "tags": [
+      {
+        "id": 6,
+        "name": "TypeMismatch"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/store/order/abc",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 7,
+    "category": {
+      "id": 107,
+      "name": "Invalid Data Types"
+    },
+    "name": "Order ID as Float",
+    "photoUrls": [],
+    "tags": [
+      {
+        "id": 7,
+        "name": "TypeMismatch"
+      }
+    ],
+    "status": null,
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/store/order/5.5",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 8,
+    "category": {
+      "id": 108,
+      "name": "Null Values"
+    },
+    "name": null,
+    "photoUrls": [],
+    "tags": [
+      {
+        "id": 8,
+        "name": "NullValue"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/store/order/null",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": null
+    },
+    "statusCode": 404
+  },
+  {
+    "id": 9,
+    "category": {
+      "id": 109,
+      "name": "Missing Path Parameters"
+    },
+    "name": "Missing Order ID",
+    "photoUrls": [],
+    "tags": [
+      {
+        "id": 9,
+        "name": "MissingParameter"
+      }
+    ],
+    "status": "pending",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/store/order/",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": null
+    },
+    "statusCode": 404
+  },
+  {
+    "id": 10,
+    "category": {
+      "id": 110,
+      "name": "Nonexistent Resource"
+    },
+    "name": "Order ID Not Found",
+    "photoUrls": [],
+    "tags": [
+      {
+        "id": 10,
+        "name": "NotFound"
+      }
+    ],
+    "status": "sold",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/store/order/9",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": null
+    },
+    "statusCode": 404
+  }
+]

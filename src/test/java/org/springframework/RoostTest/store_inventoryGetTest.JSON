@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "category": {
+      "id": 101,
+      "name": "Electronics"
+    },
+    "name": "Smartphone",
+    "photoUrls": [
+      "http://example.com/photo1.jpg",
+      "http://invalid-url"
+    ],
+    "tags": [
+      {
+        "id": 11,
+        "name": "mobile"
+      },
+      {
+        "id": 12,
+        "name": "electronics"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/store/inventory",
+      "headers": {
+        "Authorization": "Bearer valid-api-key"
+      },
+      "body": null
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 2,
+    "category": null,
+    "name": "Laptop",
+    "photoUrls": [],
+    "tags": [],
+    "status": "invalid-status",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/store/inventory",
+      "headers": {},
+      "body": null
+    },
+    "statusCode": 401
+  },
+  {
+    "id": 3,
+    "category": {
+      "id": 102,
+      "name": "Clothing"
+    },
+    "name": null,
+    "photoUrls": [
+      "http://example.com/photo2.jpg"
+    ],
+    "tags": [
+      {
+        "id": 21,
+        "name": "fashion"
+      }
+    ],
+    "status": "sold",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/store/inventory",
+      "headers": {
+        "Authorization": "Bearer invalid-api-key"
+      },
+      "body": null
+    },
+    "statusCode": 403
+  },
+  {
+    "id": 4,
+    "category": {
+      "id": 103,
+      "name": ""
+    },
+    "name": "Headphones",
+    "photoUrls": [
+      "http://example.com/photo3.jpg"
+    ],
+    "tags": [],
+    "status": null,
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/store/inventory",
+      "headers": {
+        "Authorization": "Bearer valid-api-key"
+      },
+      "body": {
+        "unexpectedField": "unexpectedValue"
+      }
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 5,
+    "category": {
+      "id": 104,
+      "name": "Furniture"
+    },
+    "name": "Chair",
+    "photoUrls": [
+      "http://example.com/photo4.jpg"
+    ],
+    "tags": [
+      {
+        "id": 31,
+        "name": "home"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/store/inventory",
+      "headers": {
+        "Authorization": "Bearer valid-api-key"
+      },
+      "body": null
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 6,
+    "category": {
+      "id": 105,
+      "name": "Books"
+    },
+    "name": "Tests Under Load",
+    "photoUrls": [],
+    "tags": [],
+    "status": "available",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/store/inventory",
+      "headers": {
+        "Authorization": "Bearer valid-api-key"
+      },
+      "body": null
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 7,
+    "category": null,
+    "name": null,
+    "photoUrls": [],
+    "tags": [],
+    "status": "pending",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/store/inventory",
+      "headers": {
+        "Authorization": "Bearer valid-api-key"
+      },
+      "body": {
+        "unexpectedField": "unexpectedValue"
+      }
+    },
+    "statusCode": 405
+  },
+  {
+    "id": 8,
+    "category": {
+      "id": 106,
+      "name": "Error Simulation Category"
+    },
+    "name": "Broken Service Test",
+    "photoUrls": [],
+    "tags": [],
+    "status": "sold",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/store/inventory",
+      "headers": {
+        "Authorization": "Bearer valid-api-key"
+      },
+      "body": null
+    },
+    "statusCode": 500
+  },
+  {
+    "id": 9,
+    "category": null,
+    "name": null,
+    "photoUrls": [],
+    "tags": [],
+    "status": "available",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/store/inventory",
+      "headers": {
+        "Authorization": "Bearer valid-api-key"
+      },
+      "body": null
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 10,
+    "category": {
+      "id": 107,
+      "name": "Large Data Stress Test"
+    },
+    "name": "Massive Inventory Load",
+    "photoUrls": [],
+    "tags": [],
+    "status": "available",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/store/inventory",
+      "headers": {
+        "Authorization": "Bearer valid-api-key"
+      },
+      "body": null
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 11,
+    "category": null,
+    "name": "Invalid Path Test",
+    "photoUrls": [
+      "http://example.com/photo-error.jpg"
+    ],
+    "tags": [],
+    "status": "sold",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/store/invalidPath",
+      "headers": {
+        "Authorization": "Bearer valid-api-key"
+      },
+      "body": null
+    },
+    "statusCode": 404
+  }
+]

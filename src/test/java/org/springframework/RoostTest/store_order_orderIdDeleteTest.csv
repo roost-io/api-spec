@@ -1,0 +1,11 @@
+orderId^|^RequestBody^|^statusCode
+1^|^{"userId":101,"action":"create","description":"Creating new profile"}^|^400
+2^|^{"userId":102,"action":"update","description":"Updating user contact information"}^|^404
+3^|^{"userId":103,"action":"delete","description":"Deleting account for inactive user"}^|^400
+4^|^{"userId":104,"action":"create","description":"Creating new profile for organizational admin"}^|^404
+5^|^{"userId":105,"action":"update","description":"Updating preference for newsletter subscriptions"}^|^400
+6^|^{"userId":106,"action":"delete","description":"Removing duplicate entries in database"}^|^404
+7^|^{"userId":107,"action":"create","description":"Setting up demo profile for product testing"}^|^400
+8^|^{"userId":108,"action":"update","description":"Correcting spelling errors in profile name"}^|^404
+9^|^{"userId":109,"action":"delete","description":"Deactivating inactive trial account"}^|^400
+10^|^{"userId":110,"action":"create","description":"Generating user record for analytics system"}^|^404

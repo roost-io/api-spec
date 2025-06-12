@@ -1,0 +1,164 @@
+[
+  {
+    "id": 1,
+    "category": {
+      "id": 101,
+      "name": "Logout"
+    },
+    "name": "testValidLogoutRequest",
+    "photoUrls": [],
+    "tags": [],
+    "status": "available",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/user/logout",
+      "headers": {},
+      "body": null
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 2,
+    "category": {
+      "id": 102,
+      "name": "Invalid Method"
+    },
+    "name": "testLogoutInvalidMethod",
+    "photoUrls": [],
+    "tags": [],
+    "status": "pending",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user/logout",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {}
+    },
+    "statusCode": 405
+  },
+  {
+    "id": 3,
+    "category": {
+      "id": 103,
+      "name": "Extra Query Parameters"
+    },
+    "name": null,
+    "photoUrls": ["http://example.com/photo1.jpg"],
+    "tags": [
+      {
+        "id": 301,
+        "name": "testParam"
+      }
+    ],
+    "status": "sold",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/user/logout?testParam=value",
+      "headers": {},
+      "body": null
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 4,
+    "category": {
+      "id": 104,
+      "name": "Concurrent Requests"
+    },
+    "name": "",
+    "photoUrls": [],
+    "tags": [],
+    "status": "available",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/user/logout",
+      "headers": {},
+      "body": null
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 5,
+    "category": {
+      "id": 105,
+      "name": "Missing Authentication Headers"
+    },
+    "name": "testNoAuthHeaders",
+    "photoUrls": [],
+    "tags": [],
+    "status": "pending",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/user/logout",
+      "headers": {
+        "Authorization": null
+      },
+      "body": null
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 6,
+    "category": {
+      "id": 106,
+      "name": "Invalid Content Type"
+    },
+    "name": "testInvalidContentTypeHeader",
+    "photoUrls": ["invalidURL"],
+    "tags": [],
+    "status": "sold",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/user/logout",
+      "headers": {
+        "Content-Type": "text/plain"
+      },
+      "body": null
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 7,
+    "category": {
+      "id": 107,
+      "name": "Empty Payload Validation"
+    },
+    "name": null,
+    "photoUrls": [],
+    "tags": [],
+    "status": null,
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/user/logout",
+      "headers": {},
+      "body": {}
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 8,
+    "category": {
+      "id": 108,
+      "name": "Error Simulation"
+    },
+    "name": "testServerErrorSimulation",
+    "photoUrls": ["http://example.com/error.jpg"],
+    "tags": [
+      {
+        "id": 401,
+        "name": "error-test"
+      }
+    ],
+    "status": "error",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/user/logout",
+      "headers": {
+        "Accept": "application/json"
+      },
+      "body": null
+    },
+    "statusCode": 500
+  }
+]

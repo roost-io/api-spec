@@ -1,0 +1,11 @@
+username^|^RequestBody^|^statusCode
+user1^|^{"action":"create","resource":"file","details":{"id":101,"name":"testfile1.txt","permissions":["read","write"]}}^|^400
+user2^|^{"action":"delete","resource":"folder","details":{"id":202,"name":"projectFolder","status":"archived"}}^|^404
+user3^|^{"action":"update","resource":"user","details":{"id":303,"username":"update_user3","active":true}}^|^400
+user4^|^{"action":"query","resource":"database","details":{"id":404,"query":"SELECT * FROM users WHERE active=1"}}^|^404
+user5^|^{"action":"upload","resource":"image","details":{"id":505,"name":"profile_picture.png","size":1024}}^|^400
+user6^|^{"action":"backup","resource":"server","details":{"id":606,"name":"prod-server","timestamp":"2023-10-10T14:30:00Z"}}^|^404
+user7^|^{"action":"retrieve","resource":"file","details":{"id":707,"name":"logfile.log","lines_requested":50}}^|^400
+user8^|^{"action":"validate","resource":"config","details":{"id":808,"status":"success","warnings":["deprecated_method"]}}^|^404
+user9^|^{"action":"send","resource":"email","details":{"id":909,"recipient":"user9@example.com","subject":"Test Mail"}}^|^400
+user10^|^{"action":"import","resource":"data","details":{"id":1010,"source":"externalAPI","records":500}}^|^404

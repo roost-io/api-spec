@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "category": {
+      "id": 1,
+      "name": "Order Tests"
+    },
+    "name": "Delete order with valid ID",
+    "photoUrls": ["http://example.com/image1.png"],
+    "tags": [
+      {
+        "id": 1,
+        "name": "ValidID"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/store/order/1234",
+      "headers": {
+        "Authorization": "Bearer validToken",
+        "Content-Type": "application/json"
+      },
+      "body": {}
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 2,
+    "category": {
+      "id": 2,
+      "name": "Error Tests"
+    },
+    "name": "Delete order with negative ID",
+    "photoUrls": [],
+    "tags": [
+      {
+        "id": 2,
+        "name": "InvalidID"
+      }
+    ],
+    "status": "pending",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/store/order/-1234",
+      "headers": {
+        "Authorization": "Bearer validToken"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 3,
+    "category": {
+      "id": 3,
+      "name": "Missing Parameter Tests"
+    },
+    "name": "Delete order with missing ID",
+    "photoUrls": ["https://example.com/test.png"],
+    "tags": [],
+    "status": "sold",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/store/order/",
+      "headers": {
+        "Authorization": "Bearer validToken",
+        "Content-Type": "application/json"
+      },
+      "body": {}
+    },
+    "statusCode": 404
+  },
+  {
+    "id": 4,
+    "category": {
+      "id": 4,
+      "name": "Validation Tests"
+    },
+    "name": "Delete order with non-integer ID",
+    "photoUrls": ["invalid_url"],
+    "tags": [
+      {
+        "id": 3,
+        "name": "SchemaMismatch"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/store/order/abc",
+      "headers": {
+        "Authorization": "Bearer validToken"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 5,
+    "category": {
+      "id": 5,
+      "name": "Boundary Tests"
+    },
+    "name": "Delete non-existing order ID",
+    "photoUrls": ["https://example.com/image.png"],
+    "tags": [
+      {
+        "id": 4,
+        "name": "NonExistentID"
+      }
+    ],
+    "status": "pending",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/store/order/999999",
+      "headers": {
+        "Authorization": "Bearer validToken",
+        "Content-Type": "application/json"
+      },
+      "body": {}
+    },
+    "statusCode": 404
+  },
+  {
+    "id": 6,
+    "category": {
+      "id": 6,
+      "name": "Boundary Tests"
+    },
+    "name": "Delete order with minimum valid ID",
+    "photoUrls": ["http://example.com/min.png"],
+    "tags": [],
+    "status": "available",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/store/order/1",
+      "headers": {
+        "Authorization": "Bearer validToken"
+      },
+      "body": null
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 7,
+    "category": {
+      "id": 7,
+      "name": "Boundary Tests"
+    },
+    "name": "Delete order with large valid ID",
+    "photoUrls": [],
+    "tags": [
+      {
+        "id": 5,
+        "name": "LargeID"
+      }
+    ],
+    "status": "sold",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/store/order/9223372036854775807",
+      "headers": {
+        "Authorization": "Bearer validToken",
+        "Accept": "application/json"
+      },
+      "body": {}
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 8,
+    "category": {
+      "id": 8,
+      "name": "Validation Tests"
+    },
+    "name": "Delete order with empty ID",
+    "photoUrls": [],
+    "tags": [
+      {
+        "id": 6,
+        "name": "EmptyID"
+      }
+    ],
+    "status": "pending",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/store/order/",
+      "headers": {
+        "Authorization": "Bearer validToken"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 9,
+    "category": {
+      "id": 9,
+      "name": "Error Tests"
+    },
+    "name": "Delete order with null ID",
+    "photoUrls": ["https://null_image"],
+    "tags": [],
+    "status": "available",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/store/order/null",
+      "headers": {
+        "Authorization": "Bearer validToken"
+      },
+      "body": {}
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 10,
+    "category": {
+      "id": 10,
+      "name": "Error Tests"
+    },
+    "name": "Delete order with special characters in ID",
+    "photoUrls": [],
+    "tags": [
+      {
+        "id": 7,
+        "name": "SpecialCharacters"
+      }
+    ],
+    "status": "sold",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/store/order/@#&*!",
+      "headers": {
+        "Authorization": "Bearer validToken",
+        "Accept": "application/json"
+      },
+      "body": {}
+    },
+    "statusCode": 400
+  }
+]
