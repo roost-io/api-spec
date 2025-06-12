@@ -1,0 +1,11 @@
+RequestBody^|^statusCode
+{"userId":1,"action":"login","timestamp":"2023-10-05T08:30:00Z"}^|^200
+{"userId":2,"action":"logout","timestamp":"2023-10-05T09:00:00Z"}^|^200
+{"userId":3,"action":"update_profile","timestamp":"2023-10-05T09:15:00Z"}^|^200
+{"userId":4,"action":"delete_account","timestamp":"2023-10-05T10:00:00Z"}^|^400
+{"userId":5,"action":"reset_password","timestamp":"2023-10-05T10:45:00Z"}^|^200
+{"userId":6,"action":"login","timestamp":"2023-10-05T11:00:00Z"}^|^200
+{"userId":7,"action":"request_data","timestamp":"2023-10-05T11:30:00Z"}^|^400
+{"userId":8,"action":"logout","timestamp":"2023-10-05T12:00:00Z"}^|^200
+{"userId":9,"action":"update_profile","timestamp":"2023-10-05T12:15:00Z"}^|^400
+{"userId":10,"action":"login","timestamp":"2023-10-05T13:00:00Z"}^|^200
