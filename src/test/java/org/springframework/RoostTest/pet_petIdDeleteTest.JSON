@@ -1,0 +1,210 @@
+[
+  {
+    "id": 1,
+    "category": {
+      "id": 1,
+      "name": "Pets"
+    },
+    "name": "Bulldog",
+    "photoUrls": ["https://example.com/pet/bulldog.jpg", "invalid_url"],
+    "tags": [
+      {
+        "id": 1,
+        "name": "dog"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/pet/123",
+      "headers": {
+        "api_key": "valid_api_key"
+      },
+      "body": null
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 2,
+    "category": {
+      "id": 2,
+      "name": "Pets"
+    },
+    "name": null,
+    "photoUrls": ["https://example.com/pet/unknown.jpg"],
+    "tags": [],
+    "status": "invalid_status",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/pet/abc",
+      "headers": {
+        "api_key": "valid_api_key"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 3,
+    "category": {
+      "id": 3,
+      "name": "Pets"
+    },
+    "name": "",
+    "photoUrls": [],
+    "tags": [],
+    "status": "pending",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/pet/",
+      "headers": {
+        "api_key": "valid_api_key"
+      },
+      "body": null
+    },
+    "statusCode": 404
+  },
+  {
+    "id": 4,
+    "category": {
+      "id": 4,
+      "name": "Pets"
+    },
+    "name": "Golden Retriever",
+    "photoUrls": ["https://example.com/pet/retriever.jpg"],
+    "tags": [
+      {
+        "id": 2,
+        "name": "dog"
+      }
+    ],
+    "status": "sold",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/pet/99999",
+      "headers": {
+        "api_key": "valid_api_key"
+      },
+      "body": null
+    },
+    "statusCode": 404
+  },
+  {
+    "id": 5,
+    "category": {
+      "id": 5,
+      "name": "Pets"
+    },
+    "name": "Persian Cat",
+    "photoUrls": ["https://example.com/pet/persian.jpg"],
+    "tags": [
+      {
+        "id": 3,
+        "name": "cat"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/pet/456",
+      "headers": {},
+      "body": null
+    },
+    "statusCode": 403
+  },
+  {
+    "id": 6,
+    "category": {
+      "id": 6,
+      "name": "Pets"
+    },
+    "name": "",
+    "photoUrls": ["https://example.com/pet/unknown.jpg"],
+    "tags": [],
+    "status": "invalid_status",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/pet/0",
+      "headers": {
+        "api_key": "valid_api_key"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 7,
+    "category": {
+      "id": 7,
+      "name": "Pets"
+    },
+    "name": "Parrot",
+    "photoUrls": ["https://example.com/pet/parrot.jpg"],
+    "tags": [
+      {
+        "id": 4,
+        "name": "bird"
+      }
+    ],
+    "status": "pending",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/pet/null",
+      "headers": {
+        "api_key": "valid_api_key"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 8,
+    "category": {
+      "id": 8,
+      "name": "Pets"
+    },
+    "name": "Rabbit",
+    "photoUrls": ["https://example.com/pet/rabbit.jpg"],
+    "tags": [
+      {
+        "id": 5,
+        "name": "small_animal"
+      }
+    ],
+    "status": "sold",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/pet/123/extra",
+      "headers": {
+        "api_key": "valid_api_key"
+      },
+      "body": null
+    },
+    "statusCode": 404
+  },
+  {
+    "id": 9,
+    "category": {
+      "id": 9,
+      "name": "Pets"
+    },
+    "name": "Chihuahua",
+    "photoUrls": ["https://example.com/pet/chihuahua.jpg"],
+    "tags": [
+      {
+        "id": 6,
+        "name": "dog"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "DELETE",
+      "url": "/v2/pet/789",
+      "headers": {
+        "api_key": "restricted_api_key"
+      },
+      "body": null
+    },
+    "statusCode": 403
+  }
+]

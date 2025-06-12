@@ -1,0 +1,11 @@
+id^|^username^|^firstName^|^lastName^|^email^|^password^|^phone^|^userStatus^|^RequestBody^|^statusCode
+1^|^john_doe^|^John^|^Doe^|^john.doe@example.com^|^password123^|^1234567890^|^1^|^{"action":"create","details":{"role":"admin","permissions":["read","write","execute"]}}^|^200
+2^|^jane_smith^|^Jane^|^Smith^|^jane.smith@example.com^|^securepass21^|^9876543210^|^1^|^{"action":"update","details":{"role":"user","permissions":["read","write"]}}^|^201
+3^|^mike_brown^|^Mike^|^Brown^|^mike.brown@example.net^|^pass4321^|^5647382910^|^2^|^{"action":"delete","details":{"role":"guest","permissions":["read"]}}^|^403
+4^|^sarah_clark^|^Sarah^|^Clark^|^sarah.clark@example.org^|^mysecretkey^|^1029384756^|^0^|^{"action":"create","details":{"role":"editor","permissions":["write","execute"]}}^|^200
+5^|^david_lee^|^David^|^Lee^|^david.lee@example.io^|^letmein123^|^0192837465^|^1^|^{"action":"update","details":{"role":"admin","permissions":["read","write","delete"]}}^|^201
+6^|^emma_green^|^Emma^|^Green^|^emma.green@example.com^|^supersecure21^|^8901234567^|^2^|^{"action":"create","details":{"role":"user","permissions":["read","execute"]}}^|^200
+7^|^lucas_jones^|^Lucas^|^Jones^|^lucas.jones@example.org^|^password789^|^8076543219^|^0^|^{"action":"delete","details":{"role":"guest","permissions":["read"]}}^|^404
+8^|^chloe_wilson^|^Chloe^|^Wilson^|^chloe.wilson@example.net^|^safepass666^|^6789012345^|^1^|^{"action":"update","details":{"role":"editor","permissions":["execute"]}}^|^201
+9^|^ethan_white^|^Ethan^|^White^|^ethan.white@example.com^|^myuniquepass^|^2345678901^|^2^|^{"action":"create","details":{"role":"admin","permissions":["delete","write"]}}^|^200
+10^|^mia_black^|^Mia^|^Black^|^mia.black@example.io^|^bestpassword1^|^4567890123^|^1^|^{"action":"create","details":{"role":"user","permissions":["read"]}}^|^200

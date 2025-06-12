@@ -1,0 +1,11 @@
+petId^|^RequestBody^|^statusCode
+1^|^{"name":"Buddy","type":"dog","age":5,"vaccinated":true}^|^200
+2^|^{"name":"Mittens","type":"cat","age":3,"vaccinated":true}^|^200
+3^|^{"name":"Goldy","type":"fish","age":1,"vaccinated":false}^|^200
+4^|^{"name":"Rocky","type":"dog","age":8,"vaccinated":true}^|^404
+5^|^{"name":"Whiskers","type":"cat","age":2,"vaccinated":false}^|^400
+6^|^{"name":"Bella","type":"dog","age":4,"vaccinated":true}^|^200
+7^|^{"name":"Chirpy","type":"bird","age":2,"vaccinated":true}^|^404
+8^|^{"name":"Shadow","type":"cat","age":3,"vaccinated":true}^|^200
+9^|^{"name":"Max","type":"dog","age":7,"vaccinated":false}^|^400
+10^|^{"name":"Spark","type":"fish","age":2,"vaccinated":false}^|^204

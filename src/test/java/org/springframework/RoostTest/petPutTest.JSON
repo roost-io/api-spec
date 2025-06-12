@@ -1,0 +1,316 @@
+[
+  {
+    "id": 1,
+    "category": {
+      "id": 1,
+      "name": "Dogs"
+    },
+    "name": "doggie",
+    "photoUrls": ["https://example.com/photos/dog1.jpg", "https://example.com/photos/dog2.jpg"],
+    "tags": [
+      {
+        "id": 101,
+        "name": "friendly"
+      },
+      {
+        "id": 102,
+        "name": "playful"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "PUT",
+      "url": "/v2/pet",
+      "headers": {
+        "Authorization": "Bearer valid_token",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "id": 1,
+        "category": { "id": 1, "name": "Dogs" },
+        "name": "doggie",
+        "photoUrls": ["https://example.com/photos/dog1.jpg", "https://example.com/photos/dog2.jpg"],
+        "tags": [
+          { "id": 101, "name": "friendly" },
+          { "id": 102, "name": "playful" }
+        ],
+        "status": "available"
+      }
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 2,
+    "category": null,
+    "name": null,
+    "photoUrls": [],
+    "tags": [],
+    "status": "available",
+    "RequestBody": {
+      "method": "PUT",
+      "url": "/v2/pet",
+      "headers": {
+        "Authorization": "Bearer valid_token",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "id": 2
+      }
+    },
+    "statusCode": 405
+  },
+  {
+    "id": 3,
+    "category": {
+      "id": 2,
+      "name": "Cats"
+    },
+    "name": "kitty",
+    "photoUrls": ["https://example.com/photos/cat1.jpg"],
+    "tags": [
+      {
+        "id": 201,
+        "name": "cute"
+      }
+    ],
+    "status": "unknown_status",
+    "RequestBody": {
+      "method": "PUT",
+      "url": "/v2/pet",
+      "headers": {
+        "Authorization": "Bearer valid_token",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "id": 3,
+        "category": { "id": 2, "name": "Cats" },
+        "name": "kitty",
+        "photoUrls": ["https://example.com/photos/cat1.jpg"],
+        "tags": [
+          { "id": 201, "name": "cute" }
+        ],
+        "status": "unknown_status"
+      }
+    },
+    "statusCode": 405
+  },
+  {
+    "id": 4,
+    "category": null,
+    "name": "parrot",
+    "photoUrls": ["https://example.com/photos/parrot.jpg"],
+    "tags": null,
+    "status": "available",
+    "RequestBody": {
+      "method": "PUT",
+      "url": "/v2/pet",
+      "headers": {
+        "Authorization": "Bearer valid_token",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "id": 4,
+        "category": null,
+        "name": "parrot",
+        "photoUrls": ["https://example.com/photos/parrot.jpg"],
+        "tags": null,
+        "status": "available"
+      }
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 5,
+    "category": {
+      "id": 3,
+      "name": "Birds"
+    },
+    "name": "sparrow",
+    "photoUrls": ["https://example.com/photos/sparrow.jpg"],
+    "tags": [
+      {
+        "id": 301,
+        "name": "small"
+      }
+    ],
+    "status": "sold",
+    "RequestBody": {
+      "method": "PUT",
+      "url": "/v2/pet",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "id": 5,
+        "category": { "id": 3, "name": "Birds" },
+        "name": "sparrow",
+        "photoUrls": ["https://example.com/photos/sparrow.jpg"],
+        "tags": [
+          { "id": 301, "name": "small" }
+        ],
+        "status": "sold"
+      }
+    },
+    "statusCode": 403
+  },
+  {
+    "id": 6,
+    "category": {
+      "id": 4,
+      "name": "Exotic"
+    },
+    "name": "iguana",
+    "photoUrls": ["https://example.com/photos/iguana.jpg"],
+    "tags": [
+      {
+        "id": 401,
+        "name": "green"
+      }
+    ],
+    "status": "pending",
+    "RequestBody": {
+      "method": "PUT",
+      "url": "/v2/pet",
+      "headers": {
+        "Authorization": "Bearer valid_token",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "id": 999999,
+        "category": { "id": 4, "name": "Exotic" },
+        "name": "iguana",
+        "photoUrls": ["https://example.com/photos/iguana.jpg"],
+        "tags": [
+          { "id": 401, "name": "green" }
+        ],
+        "status": "pending"
+      }
+    },
+    "statusCode": 404
+  },
+  {
+    "id": 7,
+    "category": {
+      "id": 5,
+      "name": "Reptiles"
+    },
+    "name": "turtle",
+    "photoUrls": ["https://example.com/photos/turtle.jpg"],
+    "tags": [
+      {
+        "id": 501,
+        "name": "slow"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "PUT",
+      "url": "/v2/pet",
+      "headers": {
+        "Authorization": "Bearer valid_token",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "id": "abc",
+        "category": { "id": 5, "name": "Reptiles" },
+        "name": "turtle",
+        "photoUrls": ["https://example.com/photos/turtle.jpg"],
+        "tags": [
+          { "id": 501, "name": "slow" }
+        ],
+        "status": "available"
+      }
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 8,
+    "category": null,
+    "name": null,
+    "photoUrls": [],
+    "tags": null,
+    "status": null,
+    "RequestBody": {
+      "method": "PUT",
+      "url": "/v2/pet",
+      "headers": {
+        "Authorization": "Bearer valid_token",
+        "Content-Type": "application/json"
+      },
+      "body": {}
+    },
+    "statusCode": 405
+  },
+  {
+    "id": 9,
+    "category": {
+      "id": 6,
+      "name": "Mammals"
+    },
+    "name": "whale",
+    "photoUrls": [
+      "https://example.com/photos/whale1.jpg",
+      "https://example.com/photos/whale2.jpg"
+    ],
+    "tags": [
+      { "id": 601, "name": "giant" },
+      { "id": 602, "name": "ocean" }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "PUT",
+      "url": "/v2/pet",
+      "headers": {
+        "Authorization": "Bearer valid_token",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "id": 9,
+        "category": { "id": 6, "name": "Mammals" },
+        "name": "whale",
+        "photoUrls": [
+          "https://example.com/photos/whale1.jpg",
+          "https://example.com/photos/whale2.jpg"
+        ],
+        "tags": [
+          { "id": 601, "name": "giant" },
+          { "id": 602, "name": "ocean" }
+        ],
+        "status": "available"
+      }
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 10,
+    "category": {
+      "id": 7,
+      "name": "Others"
+    },
+    "name": "fish&*^",
+    "photoUrls": ["https://example.com/photos/fish%20special!.jpg"],
+    "tags": [
+      { "id": 701, "name": "colorful" }
+    ],
+    "status": "sold",
+    "RequestBody": {
+      "method": "PUT",
+      "url": "/v2/pet",
+      "headers": {
+        "Authorization": "Bearer valid_token",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "id": 10,
+        "category": { "id": 7, "name": "Others" },
+        "name": "fish&*^",
+        "photoUrls": ["https://example.com/photos/fish%20special!.jpg"],
+        "tags": [
+          { "id": 701, "name": "colorful" }
+        ],
+        "status": "sold"
+      }
+    },
+    "statusCode": 200
+  }
+]

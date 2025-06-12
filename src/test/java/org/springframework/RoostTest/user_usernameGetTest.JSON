@@ -1,0 +1,217 @@
+[
+  {
+    "id": 1,
+    "category": {
+      "id": 10,
+      "name": "ValidUserTests"
+    },
+    "name": "user1",
+    "photoUrls": ["https://example.com/photo1.jpg", "https://example.com/photo2.jpg"],
+    "tags": [
+      {
+        "id": 1,
+        "name": "active"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/user/user1",
+      "headers": {
+        "Authorization": "Bearer validToken"
+      },
+      "body": null
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 2,
+    "category": {
+      "id": 20,
+      "name": "InvalidParameterTests"
+    },
+    "name": "",
+    "photoUrls": [],
+    "tags": [],
+    "status": "invalid",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/user/",
+      "headers": {
+        "Authorization": "Bearer validToken"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 3,
+    "category": {
+      "id": 30,
+      "name": "NonExistentUserTests"
+    },
+    "name": "unknownUser",
+    "photoUrls": [],
+    "tags": [
+      {
+        "id": 2,
+        "name": "inactive"
+      }
+    ],
+    "status": "pending",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/user/unknownUser",
+      "headers": {
+        "Authorization": "Bearer validToken"
+      },
+      "body": null
+    },
+    "statusCode": 404
+  },
+  {
+    "id": 4,
+    "category": {
+      "id": 40,
+      "name": "SpecialCharacterTests"
+    },
+    "name": "!@#$%^&*",
+    "photoUrls": ["invalid-url"],
+    "tags": [],
+    "status": "sold",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/user/!@#$%^&*",
+      "headers": {
+        "Authorization": "Bearer validToken"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 5,
+    "category": {
+      "id": 50,
+      "name": "EmptyStringTests"
+    },
+    "name": "",
+    "photoUrls": [],
+    "tags": [],
+    "status": "",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/user/",
+      "headers": {
+        "Authorization": "Bearer validToken"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 6,
+    "category": {
+      "id": 60,
+      "name": "LongUsernameTests"
+    },
+    "name": "longusernametestingwithmorethanexpectedcharacters",
+    "photoUrls": [],
+    "tags": [
+      {
+        "id": 3,
+        "name": "edgeCase"
+      }
+    ],
+    "status": "sold",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/user/longusernametestingwithmorethanexpectedcharacters",
+      "headers": {
+        "Authorization": "Bearer validToken"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 7,
+    "category": {
+      "id": 70,
+      "name": "NumericUserTests"
+    },
+    "name": "123456",
+    "photoUrls": ["https://example.com/photo.jpg"],
+    "tags": [],
+    "status": "available",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/user/123456",
+      "headers": {
+        "Authorization": "Bearer validToken"
+      },
+      "body": null
+    },
+    "statusCode": 404
+  },
+  {
+    "id": 8,
+    "category": {
+      "id": 80,
+      "name": "NullValueTests"
+    },
+    "name": null,
+    "photoUrls": ["https://example.com/photo1.jpg", null],
+    "tags": [],
+    "status": "pending",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/user/null",
+      "headers": {
+        "Authorization": "Bearer validToken"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 9,
+    "category": {
+      "id": 90,
+      "name": "InvalidDataTypeTests"
+    },
+    "name": 123,
+    "photoUrls": ["invalid-url"],
+    "tags": [],
+    "status": "available",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/user/123",
+      "headers": {
+        "Authorization": "Bearer validToken"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 10,
+    "category": {
+      "id": 100,
+      "name": "PathTraversalTests"
+    },
+    "name": "../../../../etc/passwd",
+    "photoUrls": [],
+    "tags": [],
+    "status": "pending",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/user/../../../../etc/passwd",
+      "headers": {
+        "Authorization": "Bearer validToken"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  }
+]

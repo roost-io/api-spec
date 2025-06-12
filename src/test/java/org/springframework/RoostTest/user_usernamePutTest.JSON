@@ -1,0 +1,369 @@
+[
+  {
+    "id": 1,
+    "category": {
+      "id": 101,
+      "name": "Valid Category"
+    },
+    "name": "Test Pet",
+    "photoUrls": ["https://valid-url.com/image1.jpg", "https://valid-url.com/image2.jpg"],
+    "tags": [
+      {
+        "id": 1,
+        "name": "Tag1"
+      },
+      {
+        "id": 2,
+        "name": "Tag2"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "id": 1,
+        "category": {
+          "id": 101,
+          "name": "Valid Category"
+        },
+        "name": "Test Pet",
+        "photoUrls": ["https://valid-url.com/image1.jpg", "https://valid-url.com/image2.jpg"],
+        "tags": [
+          {
+            "id": 1,
+            "name": "Tag1"
+          },
+          {
+            "id": 2,
+            "name": "Tag2"
+          }
+        ],
+        "status": "available"
+      }
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 2,
+    "category": {
+      "id": 102,
+      "name": "Missing Name Category"
+    },
+    "name": null,
+    "photoUrls": [],
+    "tags": [],
+    "status": "pending",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "id": 2,
+        "category": {
+          "id": 102,
+          "name": "Missing Name Category"
+        },
+        "name": null,
+        "photoUrls": [],
+        "tags": [],
+        "status": "pending"
+      }
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 3,
+    "category": {
+      "id": 103,
+      "name": "Invalid URL Category"
+    },
+    "name": "InvalidUrlPet",
+    "photoUrls": ["invalid-url", "http:/invalid-url.com"],
+    "tags": [],
+    "status": "sold",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "id": 3,
+        "category": {
+          "id": 103,
+          "name": "Invalid URL Category"
+        },
+        "name": "InvalidUrlPet",
+        "photoUrls": ["invalid-url", "http:/invalid-url.com"],
+        "tags": [],
+        "status": "sold"
+      }
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 4,
+    "category": {
+      "id": 104,
+      "name": "Null Fields Category"
+    },
+    "name": null,
+    "photoUrls": null,
+    "tags": null,
+    "status": null,
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "id": 4,
+        "category": {
+          "id": 104,
+          "name": "Null Fields Category"
+        },
+        "name": null,
+        "photoUrls": null,
+        "tags": null,
+        "status": null
+      }
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 5,
+    "category": {
+      "id": 105,
+      "name": "Boundary Test Category"
+    },
+    "name": "A".repeat(256),
+    "photoUrls": ["https://valid-url.com/image1.jpg"],
+    "tags": [
+      {
+        "id": 1,
+        "name": "TagBoundaryTest"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "id": 5,
+        "category": {
+          "id": 105,
+          "name": "Boundary Test Category"
+        },
+        "name": "A".repeat(256),
+        "photoUrls": ["https://valid-url.com/image1.jpg"],
+        "tags": [
+          {
+            "id": 1,
+            "name": "TagBoundaryTest"
+          }
+        ],
+        "status": "available"
+      }
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 6,
+    "category": {
+      "id": 106,
+      "name": "Invalid Status Category"
+    },
+    "name": "InvalidStatusPet",
+    "photoUrls": ["https://valid-url.com/image.jpg"],
+    "tags": [
+      {
+        "id": 1,
+        "name": "Tag1"
+      }
+    ],
+    "status": "invalid_status",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "id": 6,
+        "category": {
+          "id": 106,
+          "name": "Invalid Status Category"
+        },
+        "name": "InvalidStatusPet",
+        "photoUrls": ["https://valid-url.com/image.jpg"],
+        "tags": [
+          {
+            "id": 1,
+            "name": "Tag1"
+          }
+        ],
+        "status": "invalid_status"
+      }
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 7,
+    "category": {
+      "id": 107,
+      "name": null
+    },
+    "name": "",
+    "photoUrls": [],
+    "tags": [],
+    "status": "pending",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "id": 7,
+        "category": {
+          "id": 107,
+          "name": null
+        },
+        "name": "",
+        "photoUrls": [],
+        "tags": [],
+        "status": "pending"
+      }
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 8,
+    "category": {
+      "id": 108,
+      "name": "Extra Fields Category"
+    },
+    "name": "ExtraFieldsPet",
+    "photoUrls": ["https://valid-url.com/image.jpg"],
+    "tags": [
+      {
+        "id": 1,
+        "name": "TagExtraField"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "id": 8,
+        "category": {
+          "id": 108,
+          "name": "Extra Fields Category"
+        },
+        "name": "ExtraFieldsPet",
+        "photoUrls": ["https://valid-url.com/image.jpg"],
+        "tags": [
+          {
+            "id": 1,
+            "name": "TagExtraField"
+          }
+        ],
+        "status": "available",
+        "extraField": "unexpected-value"
+      }
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 9,
+    "category": {
+      "id": 109,
+      "name": "Incorrect Header Category"
+    },
+    "name": "IncorrectHeaderPet",
+    "photoUrls": ["https://valid-url.com/image.jpg"],
+    "tags": [
+      {
+        "id": 1,
+        "name": "TagIncorrectHeader"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet",
+      "headers": {
+        "Content-Type": "text/plain"
+      },
+      "body": {
+        "id": 9,
+        "category": {
+          "id": 109,
+          "name": "Incorrect Header Category"
+        },
+        "name": "IncorrectHeaderPet",
+        "photoUrls": ["https://valid-url.com/image.jpg"],
+        "tags": [
+          {
+            "id": 1,
+            "name": "TagIncorrectHeader"
+          }
+        ],
+        "status": "available"
+      }
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 10,
+    "category": {
+      "id": 110,
+      "name": "Unauthorized Category"
+    },
+    "name": "UnauthorizedPet",
+    "photoUrls": ["https://valid-url.com/image.jpg"],
+    "tags": [
+      {
+        "id": 1,
+        "name": "TagUnauthorized"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet",
+      "headers": {},
+      "body": {
+        "id": 10,
+        "category": {
+          "id": 110,
+          "name": "Unauthorized Category"
+        },
+        "name": "UnauthorizedPet",
+        "photoUrls": ["https://valid-url.com/image.jpg"],
+        "tags": [
+          {
+            "id": 1,
+            "name": "TagUnauthorized"
+          }
+        ],
+        "status": "available"
+      }
+    },
+    "statusCode": 401
+  }
+]

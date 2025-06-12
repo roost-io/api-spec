@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "category": { "id": 101, "name": "Authentication" },
+    "name": "Valid Login",
+    "photoUrls": ["https://example.com/icon.png"],
+    "tags": [{ "id": 1, "name": "success" }],
+    "status": "available",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/user/login?username=user1&password=password123",
+      "headers": { "Accept": "application/json" },
+      "body": null
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 2,
+    "category": { "id": 102, "name": "Authentication" },
+    "name": null,
+    "photoUrls": ["invalid_url"],
+    "tags": [{ "id": 2, "name": "" }],
+    "status": "pending",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/user/login?password=password123",
+      "headers": { "Accept": "application/json" },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 3,
+    "category": { "id": 103, "name": "Authentication" },
+    "name": "Missing Password",
+    "photoUrls": ["https://example.com/missing.png"],
+    "tags": [{ "id": 3, "name": "error" }],
+    "status": "sold",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/user/login?username=user1",
+      "headers": { "Accept": "application/json" },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 4,
+    "category": { "id": 104, "name": "Security" },
+    "name": "Empty Username",
+    "photoUrls": [""],
+    "tags": [{ "id": 4, "name": "invalid_username" }],
+    "status": "available",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/user/login?username=&password=password123",
+      "headers": { "Accept": "application/json" },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 5,
+    "category": { "id": 105, "name": "Validation" },
+    "name": "Empty Password",
+    "photoUrls": ["https://example.com/valid.png"],
+    "tags": [{ "id": 5, "name": "invalid_password" }],
+    "status": "pending",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/user/login?username=user1&password=",
+      "headers": { "Accept": "application/json" },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 6,
+    "category": { "id": 106, "name": "Validation" },
+    "name": "Invalid Credentials",
+    "photoUrls": ["https://example.com/error.png"],
+    "tags": [{ "id": 6, "name": "invalid_auth" }],
+    "status": "sold",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/user/login?username=invalidUser&password=wrongPassword",
+      "headers": { "Accept": "application/json" },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 7,
+    "category": { "id": 107, "name": "Security" },
+    "name": "SQL Injection Username",
+    "photoUrls": ["https://example.com/security.png"],
+    "tags": [{ "id": 7, "name": "sql_injection" }],
+    "status": "available",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/user/login?username=admin OR '1'='1'&password=admin123",
+      "headers": { "Accept": "application/json" },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 8,
+    "category": { "id": 108, "name": "Validation" },
+    "name": "Invalid Password Format",
+    "photoUrls": ["https://example.com/password.png"],
+    "tags": [{ "id": 8, "name": "invalid_format" }],
+    "status": "sold",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/user/login?username=user1&password=123",
+      "headers": { "Accept": "application/json" },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 9,
+    "category": { "id": 109, "name": "Headers" },
+    "name": "Valid Login with Header Validation",
+    "photoUrls": ["https://example.com/icon.png"],
+    "tags": [{ "id": 9, "name": "header_validation" }],
+    "status": "available",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/user/login?username=user1&password=password123",
+      "headers": { "Accept": "application/json" },
+      "body": null
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 10,
+    "category": { "id": 110, "name": "Validation" },
+    "name": "Long Username",
+    "photoUrls": ["https://example.com/error.png"],
+    "tags": [{ "id": 10, "name": "invalid_input" }],
+    "status": "pending",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/user/login?username=verylongusernamethatexceedslimit&password=password123",
+      "headers": { "Accept": "application/json" },
+      "body": null
+    },
+    "statusCode": 400
+  }
+]

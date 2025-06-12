@@ -1,0 +1,11 @@
+username^|^id^|^firstName^|^lastName^|^email^|^password^|^phone^|^userStatus^|^RequestBody^|^statusCode
+jdoe123^|^1^|^John^|^Doe^|^john.doe@example.com^|^securePass1!^|^1234567890^|^1^|^{"action":"create","timestamp":"2023-10-01T10:00:00Z"}^|^400
+asmith456^|^2^|^Alice^|^Smith^|^alice.smith@example.org^|^password321!^|^9876543210^|^0^|^{"action":"update","timestamp":"2023-10-02T11:00:00Z"}^|^404
+bjones789^|^3^|^Bob^|^Jones^|^bob.jones@example.net^|^myPass!789^|^1231231234^|^1^|^{"action":"delete","timestamp":"2023-10-03T12:00:00Z"}^|^400
+kwhite012^|^4^|^Karen^|^White^|^karen.white@example.com^|^passKaren007$^|^4564564567^|^0^|^{"action":"create","timestamp":"2023-10-04T13:00:00Z"}^|^404
+mtaylor234^|^5^|^Mike^|^Taylor^|^mike.taylor@example.org^|^secureMike!234^|^7897897890^|^1^|^{"action":"update","timestamp":"2023-10-05T14:00:00Z"}^|^400
+ljohnson345^|^6^|^Linda^|^Johnson^|^linda.johnson@example.net^|^LindaSecret!345^|^3213213210^|^0^|^{"action":"delete","timestamp":"2023-10-06T15:00:00Z"}^|^404
+dcooper567^|^7^|^David^|^Cooper^|^david.cooper@example.com^|^coopSecure567^|^6546546543^|^1^|^{"action":"create","timestamp":"2023-10-07T16:00:00Z"}^|^400
+snguyen678^|^8^|^Sophia^|^Nguyen^|^sophia.nguyen@example.org^|^Sophia!Nguyen678^|^9876543219^|^0^|^{"action":"update","timestamp":"2023-10-08T17:00:00Z"}^|^404
+wwilson789^|^9^|^William^|^Wilson^|^william.wilson@example.net^|^will2023!rew^|^9638527410^|^1^|^{"action":"delete","timestamp":"2023-10-09T18:00:00Z"}^|^400
+ccarter890^|^10^|^Chris^|^Carter^|^chris.carter@example.com^|^carterPass!001^|^1472583690^|^0^|^{"action":"create","timestamp":"2023-10-10T19:00:00Z"}^|^404
