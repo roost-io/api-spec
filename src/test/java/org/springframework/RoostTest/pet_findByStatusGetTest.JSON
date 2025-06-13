@@ -1,0 +1,241 @@
+[
+  {
+    "id": 1,
+    "category": {
+      "id": 101,
+      "name": "Cat"
+    },
+    "name": "Fluffy",
+    "photoUrls": ["http://example.com/cat/fluffy.jpg"],
+    "tags": [
+      {
+        "id": 201,
+        "name": "Small"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/pet/findByStatus?status=available",
+      "headers": {
+        "Authorization": "Bearer validToken123"
+      },
+      "body": null
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 2,
+    "category": null,
+    "name": null,
+    "photoUrls": [],
+    "tags": [],
+    "status": null,
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/pet/findByStatus",
+      "headers": {
+        "Authorization": "Bearer validToken123"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 3,
+    "category": {
+      "id": 102,
+      "name": "Dog"
+    },
+    "name": "Buddy",
+    "photoUrls": ["invalid_url"],
+    "tags": [
+      {
+        "id": 202,
+        "name": ""
+      }
+    ],
+    "status": "invalidStatus",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/pet/findByStatus?status=invalidStatus",
+      "headers": {
+        "Authorization": "Bearer validToken123"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 4,
+    "category": {
+      "id": 103,
+      "name": "Bird"
+    },
+    "name": "Chirpy",
+    "photoUrls": ["http://example.com/bird/chirpy.jpg"],
+    "tags": [
+      {
+        "id": 203,
+        "name": "Flying"
+      },
+      {
+        "id": 204,
+        "name": "Colorful"
+      }
+    ],
+    "status": "available,pending",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/pet/findByStatus?status=available,pending",
+      "headers": {
+        "Authorization": "Bearer validToken123"
+      },
+      "body": null
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 5,
+    "category": {
+      "id": 104,
+      "name": "Fish"
+    },
+    "name": "Goldie",
+    "photoUrls": ["http://example.com/fish/goldie.jpg"],
+    "tags": [
+      {
+        "id": 205,
+        "name": "Aquatic"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/pet/findByStatus?status=available",
+      "headers": {},
+      "body": null
+    },
+    "statusCode": 403
+  },
+  {
+    "id": 6,
+    "category": {
+      "id": 105,
+      "name": "Reptile"
+    },
+    "name": "Slinky",
+    "photoUrls": ["http://example.com/reptile/slinky.jpg"],
+    "tags": [
+      {
+        "id": 206,
+        "name": "Slow"
+      }
+    ],
+    "status": "available,pending,sold,available,sold,pending",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/pet/findByStatus?status=available,pending,sold,available,sold,pending",
+      "headers": {
+        "Authorization": "Bearer validToken123"
+      },
+      "body": null
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 7,
+    "category": {
+      "id": 106,
+      "name": "Hamster"
+    },
+    "name": "",
+    "photoUrls": [],
+    "tags": [],
+    "status": "",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/pet/findByStatus?status=",
+      "headers": {
+        "Authorization": "Bearer validToken123"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 8,
+    "category": {
+      "id": 107,
+      "name": "Rabbit"
+    },
+    "name": null,
+    "photoUrls": ["http://example.com/rabbit.jpg"],
+    "tags": [
+      {
+        "id": 207,
+        "name": "Fast"
+      }
+    ],
+    "status": null,
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/pet/findByStatus?status=null",
+      "headers": {
+        "Authorization": "Bearer validToken123"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 9,
+    "category": {
+      "id": 108,
+      "name": "Snake"
+    },
+    "name": "Slither",
+    "photoUrls": ["http://example.com/snake/slither.jpg"],
+    "tags": [
+      {
+        "id": 208,
+        "name": "Dangerous"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/pet/findByStatus?status=available",
+      "headers": {
+        "Authorization": "Bearer invalidToken456"
+      },
+      "body": null
+    },
+    "statusCode": 403
+  },
+  {
+    "id": 10,
+    "category": {
+      "id": 109,
+      "name": "Parrot"
+    },
+    "name": "Polly",
+    "photoUrls": ["http://example.com/parrot/polly.jpg"],
+    "tags": [
+      {
+        "id": 209,
+        "name": "Talkative"
+      }
+    ],
+    "status": "pending",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/pet/findByStatus?status=pending",
+      "headers": {
+        "Authorization": "Bearer validToken123"
+      },
+      "body": null
+    },
+    "statusCode": 200
+  }
+]

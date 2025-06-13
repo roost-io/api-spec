@@ -1,0 +1,11 @@
+username^|^RequestBody^|^statusCode
+user1^|^{"action":"login","details":{"timestamp":"2023-10-01T12:34:56","device":"mobile"}}^|^200
+user2^|^{"action":"logout","details":{"timestamp":"2023-10-02T14:12:45","device":"desktop"}}^|^200
+user3^|^{"action":"update_profile","details":{"timestamp":"2023-10-03T09:45:30","fields_updated":["email","username"]}}^|^200
+user4^|^{"action":"delete_account","details":{"timestamp":"2023-10-04T17:22:58"}}^|^200
+user5^|^{"action":"login","details":{"timestamp":"2023-10-05T07:15:43","device":"tablet"}}^|^400
+user6^|^{"action":"login","details":{"timestamp":"2023-10-06T13:00:08","device":"desktop"}}^|^404
+user7^|^{"action":"recover_password","details":{"timestamp":"2023-10-07T10:34:29","method":"email"}}^|^200
+user8^|^{"action":"update_preferences","details":{"timestamp":"2023-10-08T18:45:42","preferences_updated":["theme","notifications"]}}^|^200
+user9^|^{"action":"login","details":{"timestamp":"2023-10-09T23:22:11","device":"smartwatch"}}^|^400
+user10^|^{"action":"logout","details":{"timestamp":"2023-10-10T15:15:15","device":"mobile"}}^|^404

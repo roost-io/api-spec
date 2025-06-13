@@ -1,0 +1,235 @@
+[
+  {
+    "id": 1,
+    "category": {
+      "id": 101,
+      "name": "Dog"
+    },
+    "name": "Buddy",
+    "photoUrls": ["https://example.com/photos/123.jpg"],
+    "tags": [
+      {
+        "id": 201,
+        "name": "Tag1"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/pet/123",
+      "headers": {
+        "Authorization": "Bearer validApiKey"
+      },
+      "body": null
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 2,
+    "category": {
+      "id": 102,
+      "name": "Cat"
+    },
+    "name": "Whiskers",
+    "photoUrls": ["https://example.com/photos/124.jpg"],
+    "tags": [
+      {
+        "id": 202,
+        "name": "Tag2"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/pet/999999999",
+      "headers": {
+        "Authorization": "Bearer validApiKey"
+      },
+      "body": null
+    },
+    "statusCode": 404
+  },
+  {
+    "id": 3,
+    "category": {
+      "id": 103,
+      "name": "Rabbit"
+    },
+    "name": null,
+    "photoUrls": [],
+    "tags": [],
+    "status": "pending",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/pet/abc123",
+      "headers": {
+        "Authorization": "Bearer validApiKey"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 4,
+    "category": {
+      "id": 104,
+      "name": "Dog"
+    },
+    "name": "Max",
+    "photoUrls": ["invalid-url"],
+    "tags": [
+      {
+        "id": 203,
+        "name": "Tag3"
+      }
+    ],
+    "status": "sold",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/pet/123",
+      "headers": {},
+      "body": null
+    },
+    "statusCode": 403
+  },
+  {
+    "id": 5,
+    "category": {
+      "id": 105,
+      "name": null
+    },
+    "name": "",
+    "photoUrls": ["https://example.com/photos/125.jpg"],
+    "tags": [
+      {
+        "id": 204,
+        "name": "Tag4"
+      }
+    ],
+    "status": "invalid",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/pet/null",
+      "headers": {
+        "Authorization": "Bearer validApiKey"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 6,
+    "category": {
+      "id": 106,
+      "name": "Fish"
+    },
+    "name": "Goldie",
+    "photoUrls": [],
+    "tags": [
+      {
+        "id": 205,
+        "name": null
+      }
+    ],
+    "status": "sold",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/pet/123.45",
+      "headers": {
+        "Authorization": "Bearer validApiKey"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 7,
+    "category": {
+      "id": 107,
+      "name": "Bird"
+    },
+    "name": null,
+    "photoUrls": [],
+    "tags": [],
+    "status": "available",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/pet/-123",
+      "headers": {
+        "Authorization": "Bearer validApiKey"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 8,
+    "category": {
+      "id": 108,
+      "name": "Dog"
+    },
+    "name": "Rex",
+    "photoUrls": ["https://example.com/photos/126.jpg"],
+    "tags": [
+      {
+        "id": 206,
+        "name": "Tag5"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/pet/000123",
+      "headers": {
+        "Authorization": "Bearer validApiKey"
+      },
+      "body": null
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 9,
+    "category": {
+      "id": 109,
+      "name": "Dog"
+    },
+    "name": "BigMax",
+    "photoUrls": ["https://example.com/photos/127.jpg"],
+    "tags": [],
+    "status": "pending",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/pet/9223372036854775807",
+      "headers": {
+        "Authorization": "Bearer validApiKey"
+      },
+      "body": null
+    },
+    "statusCode": 404
+  },
+  {
+    "id": 10,
+    "category": {
+      "id": 110,
+      "name": "Dog"
+    },
+    "name": "TinyMax",
+    "photoUrls": ["https://example.com/photos/128.jpg"],
+    "tags": [
+      {
+        "id": 207,
+        "name": "Tag6"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "GET",
+      "url": "/v2/pet/-9223372036854775808",
+      "headers": {
+        "Authorization": "Bearer validApiKey"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  }
+]

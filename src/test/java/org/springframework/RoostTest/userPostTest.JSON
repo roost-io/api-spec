@@ -1,0 +1,306 @@
+[
+  {
+    "id": 1,
+    "category": {
+      "id": 1,
+      "name": "User"
+    },
+    "name": "testCreateUserWithValidData",
+    "photoUrls": ["https://example.com/photo1.jpg"],
+    "tags": [
+      {
+        "id": 1,
+        "name": "validTest"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer validToken"
+      },
+      "body": {
+        "id": 100,
+        "username": "validUser",
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe@example.com",
+        "password": "12345",
+        "phone": "1234567890",
+        "userStatus": 1
+      }
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 2,
+    "category": {
+      "id": 2,
+      "name": "User"
+    },
+    "name": null,
+    "photoUrls": ["invalid-url"],
+    "tags": [],
+    "status": "invalid-status",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {}
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 3,
+    "category": {
+      "id": 3,
+      "name": "User"
+    },
+    "name": "testCreateUserWithEmptyBody",
+    "photoUrls": [],
+    "tags": [],
+    "status": "pending",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {}
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 4,
+    "category": {
+      "id": 4,
+      "name": "User"
+    },
+    "name": "testCreateUserWithNullFields",
+    "photoUrls": null,
+    "tags": null,
+    "status": null,
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "id": null,
+        "username": null,
+        "firstName": null,
+        "lastName": null,
+        "email": null,
+        "password": null,
+        "phone": null,
+        "userStatus": null
+      }
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 5,
+    "category": {
+      "id": 5,
+      "name": "User"
+    },
+    "name": "testCreateUserWithInvalidDataTypes",
+    "photoUrls": ["https://example.com/photo1.jpg"],
+    "tags": [
+      {
+        "id": 1,
+        "name": "invalidTypeTest"
+      }
+    ],
+    "status": "sold",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "id": "stringInsteadOfInteger",
+        "username": "validUser",
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe@example.com",
+        "password": "12345",
+        "phone": "1234567890",
+        "userStatus": "stringInsteadOfInteger"
+      }
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 6,
+    "category": {
+      "id": 6,
+      "name": "User"
+    },
+    "name": "testCreateUserWithExcessFields",
+    "photoUrls": ["https://example.com/photo1.jpg"],
+    "tags": [
+      {
+        "id": 1,
+        "name": "excessFieldTest"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "id": 100,
+        "username": "excessUserField",
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe@example.com",
+        "password": "12345",
+        "phone": "1234567890",
+        "userStatus": 1,
+        "unknownField": "extraInformation"
+      }
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 7,
+    "category": {
+      "id": 7,
+      "name": "User"
+    },
+    "name": "testCreateUserWithInvalidEmailFormat",
+    "photoUrls": ["https://example.com/photo1.jpg"],
+    "tags": [
+      {
+        "id": 1,
+        "name": "emailTest"
+      }
+    ],
+    "status": "sold",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "id": 101,
+        "username": "invalidEmailUser",
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "invalid-email",
+        "password": "12345",
+        "phone": "1234567890",
+        "userStatus": 1
+      }
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 8,
+    "category": {
+      "id": 8,
+      "name": "User"
+    },
+    "name": "testCreateUserWithLongStrings",
+    "photoUrls": ["https://example.com/photo1.jpg"],
+    "tags": [
+      {
+        "id": 1,
+        "name": "longStringTest"
+      }
+    ],
+    "status": "pending",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "id": 102,
+        "username": "a".repeat(501),
+        "firstName": "b".repeat(501),
+        "lastName": "c".repeat(501),
+        "email": "long.string.user@example.com",
+        "password": "12345",
+        "phone": "1234567890",
+        "userStatus": 1
+      }
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 9,
+    "category": {
+      "id": 9,
+      "name": "User"
+    },
+    "name": "testCreateUserWithNegativeID",
+    "photoUrls": ["https://example.com/photo1.jpg"],
+    "tags": [
+      {
+        "id": 1,
+        "name": "negativeIDTest"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "id": -1,
+        "username": "negativeIDUser",
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe@example.com",
+        "password": "12345",
+        "phone": "1234567890",
+        "userStatus": 1
+      }
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 10,
+    "category": {
+      "id": 10,
+      "name": "User"
+    },
+    "name": "testCreateUserWithoutAuthentication",
+    "photoUrls": ["https://example.com/photo1.jpg"],
+    "tags": [],
+    "status": "sold",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "id": 103,
+        "username": "unauthenticatedUser",
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe.unauthenticated@example.com",
+        "password": "12345",
+        "phone": "1234567890",
+        "userStatus": 1
+      }
+    },
+    "statusCode": 401
+  }
+]

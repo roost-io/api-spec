@@ -1,0 +1,347 @@
+[
+  {
+    "id": 1,
+    "category": {
+      "id": 101,
+      "name": "Functional"
+    },
+    "name": "User creation with valid input",
+    "photoUrls": ["http://example.com/photo1.jpg", "http://example.com/photo2.png"],
+    "tags": [
+      {
+        "id": 201,
+        "name": "Create"
+      },
+      {
+        "id": 202,
+        "name": "Valid"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user/createWithList",
+      "headers": {
+        "Authorization": "Bearer validToken",
+        "Content-Type": "application/json"
+      },
+      "body": [
+        {
+          "id": 1,
+          "username": "validUser1",
+          "password": "securePassword123",
+          "email": "validEmail@example.com"
+        }
+      ]
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 2,
+    "category": {
+      "id": 102,
+      "name": "Error Handling"
+    },
+    "name": "Empty body in request",
+    "photoUrls": [],
+    "tags": [
+      {
+        "id": 203,
+        "name": "EmptyBody"
+      },
+      {
+        "id": 204,
+        "name": "Validation"
+      }
+    ],
+    "status": "pending",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user/createWithList",
+      "headers": {
+        "Authorization": "Bearer validToken",
+        "Content-Type": "application/json"
+      },
+      "body": []
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 3,
+    "category": {
+      "id": 103,
+      "name": "Error Handling"
+    },
+    "name": null,
+    "photoUrls": null,
+    "tags": [],
+    "status": "sold",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user/createWithList",
+      "headers": {
+        "Authorization": "Bearer validToken",
+        "Content-Type": "application/json"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 4,
+    "category": {
+      "id": 104,
+      "name": "Field Omission"
+    },
+    "name": "Missing body parameter",
+    "photoUrls": [],
+    "tags": [],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user/createWithList",
+      "headers": {
+        "Authorization": "Bearer validToken",
+        "Content-Type": "application/json"
+      },
+      "body": {}
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 5,
+    "category": {
+      "id": 105,
+      "name": "Type Validation"
+    },
+    "name": "Invalid user ID type",
+    "photoUrls": ["invalid-url"],
+    "tags": [
+      {
+        "id": 205,
+        "name": "InvalidId"
+      }
+    ],
+    "status": "pending",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user/createWithList",
+      "headers": {
+        "Authorization": "Bearer validToken",
+        "Content-Type": "application/json"
+      },
+      "body": [
+        {
+          "id": "invalidId",
+          "username": "userWithInvalidId",
+          "password": "securePassword123",
+          "email": "validEmail@example.com"
+        }
+      ]
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 6,
+    "category": {
+      "id": 106,
+      "name": "Field Validation"
+    },
+    "name": "Missing required fields",
+    "photoUrls": [],
+    "tags": [
+      {
+        "id": 206,
+        "name": "MissingFields"
+      }
+    ],
+    "status": "sold",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user/createWithList",
+      "headers": {
+        "Authorization": "Bearer validToken",
+        "Content-Type": "application/json"
+      },
+      "body": [
+        {
+          "id": 2,
+          "username": null,
+          "password": null,
+          "email": "validEmail@example.com"
+        }
+      ]
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 7,
+    "category": {
+      "id": 107,
+      "name": "Boundary Testing"
+    },
+    "name": "Exceed maximum users in list",
+    "photoUrls": [],
+    "tags": [
+      {
+        "id": 207,
+        "name": "ExceedLimit"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user/createWithList",
+      "headers": {
+        "Authorization": "Bearer validToken",
+        "Content-Type": "application/json"
+      },
+      "body": Array(101).fill({
+        "id": 3,
+        "username": "validUser",
+        "password": "securePassword123",
+        "email": "validEmail@example.com"
+      })
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 8,
+    "category": {
+      "id": 108,
+      "name": "Character Handling"
+    },
+    "name": "Special characters in username",
+    "photoUrls": ["http://example.com/photo3.jpg"],
+    "tags": [
+      {
+        "id": 208,
+        "name": "SpecialCharacters"
+      }
+    ],
+    "status": "pending",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user/createWithList",
+      "headers": {
+        "Authorization": "Bearer validToken",
+        "Content-Type": "application/json"
+      },
+      "body": [
+        {
+          "id": 4,
+          "username": "user@#$%",
+          "password": "securePassword123",
+          "email": "validEmail@example.com"
+        }
+      ]
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 9,
+    "category": {
+      "id": 109,
+      "name": "Data Validation"
+    },
+    "name": "Invalid email format",
+    "photoUrls": ["http://example.com/invalid-photo"],
+    "tags": [
+      {
+        "id": 209,
+        "name": "InvalidEmail"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user/createWithList",
+      "headers": {
+        "Authorization": "Bearer validToken",
+        "Content-Type": "application/json"
+      },
+      "body": [
+        {
+          "id": 5,
+          "username": "userWithInvalidEmail",
+          "password": "securePassword123",
+          "email": "invalid-email"
+        }
+      ]
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 10,
+    "category": {
+      "id": 110,
+      "name": "Edge Case Validation"
+    },
+    "name": "Edge values for userStatus",
+    "photoUrls": ["http://example.com/photo-edgecase.jpg"],
+    "tags": [
+      {
+        "id": 210,
+        "name": "EdgeStatus"
+      }
+    ],
+    "status": "pending",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user/createWithList",
+      "headers": {
+        "Authorization": "Bearer validToken",
+        "Content-Type": "application/json"
+      },
+      "body": [
+        {
+          "id": 6,
+          "username": "edgeCaseUser",
+          "password": "securePassword123",
+          "email": "validEmail@example.com",
+          "userStatus": -1
+        }
+      ]
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 11,
+    "category": {
+      "id": 111,
+      "name": "Deduplication Checks"
+    },
+    "name": "Duplicate users in list",
+    "photoUrls": ["http://example.com/photo-duplicate.jpg"],
+    "tags": [
+      {
+        "id": 211,
+        "name": "Duplicates"
+      }
+    ],
+    "status": "sold",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user/createWithList",
+      "headers": {
+        "Authorization": "Bearer validToken",
+        "Content-Type": "application/json"
+      },
+      "body": [
+        {
+          "id": 7,
+          "username": "duplicateUser",
+          "password": "securePassword123",
+          "email": "duplicateEmail@example.com"
+        },
+        {
+          "id": 7,
+          "username": "duplicateUser",
+          "password": "securePassword123",
+          "email": "duplicateEmail@example.com"
+        }
+      ]
+    },
+    "statusCode": 200
+  }
+]

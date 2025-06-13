@@ -1,0 +1,314 @@
+[
+  {
+    "id": 1,
+    "category": {
+      "id": 100,
+      "name": "Dogs"
+    },
+    "name": "Bulldog",
+    "photoUrls": [
+      "https://example.com/bulldog.jpg"
+    ],
+    "tags": [
+      {
+        "id": 1,
+        "name": "Friendly"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet/123/uploadImage",
+      "headers": {
+        "Authorization": "Bearer valid_token"
+      },
+      "body": {
+        "additionalMetadata": "Healthy Pet",
+        "file": "bulldog.jpg"
+      }
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 2,
+    "category": {
+      "id": 101,
+      "name": "Cats"
+    },
+    "name": null,
+    "photoUrls": [],
+    "tags": [],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet/-1/uploadImage",
+      "headers": {
+        "Authorization": "Bearer valid_token"
+      },
+      "body": {
+        "additionalMetadata": "Cute Cat",
+        "file": "cat.jpg"
+      }
+    },
+    "statusCode": 404
+  },
+  {
+    "id": 3,
+    "category": {
+      "id": null,
+      "name": null
+    },
+    "name": "",
+    "photoUrls": [
+      "invalid_url"
+    ],
+    "tags": [
+      {
+        "id": null,
+        "name": ""
+      }
+    ],
+    "status": "pending",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet/123/uploadImage",
+      "headers": {},
+      "body": {
+        "additionalMetadata": "",
+        "file": "dog.jpg"
+      }
+    },
+    "statusCode": 401
+  },
+  {
+    "id": 4,
+    "category": {
+      "id": 102,
+      "name": "Fish"
+    },
+    "name": "Goldfish",
+    "photoUrls": [
+      "https://example.com/goldfish.jpg"
+    ],
+    "tags": [
+      {
+        "id": 2,
+        "name": "Golden"
+      }
+    ],
+    "status": "sold",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet/uploadImage",
+      "headers": {
+        "Authorization": "Bearer valid_token"
+      },
+      "body": {
+        "additionalMetadata": "Colorful Pet",
+        "file": "goldfish.jpg"
+      }
+    },
+    "statusCode": 404
+  },
+  {
+    "id": 5,
+    "category": {
+      "id": 103,
+      "name": "Birds"
+    },
+    "name": "Parrot",
+    "photoUrls": [
+      "https://example.com/parrot.jpg"
+    ],
+    "tags": [
+      {
+        "id": 3,
+        "name": "Talkative"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet/123/uploadImage",
+      "headers": {
+        "Authorization": "Bearer valid_token"
+      },
+      "body": {
+        "additionalMetadata": "Large File",
+        "file": "10GB_file.jpg"
+      }
+    },
+    "statusCode": 413
+  },
+  {
+    "id": 6,
+    "category": {
+      "id": 104,
+      "name": "Reptiles"
+    },
+    "name": "Snake",
+    "photoUrls": [
+      "https://example.com/snake.exe"
+    ],
+    "tags": [
+      {
+        "id": 4,
+        "name": "Venomous"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet/123/uploadImage",
+      "headers": {
+        "Authorization": "Bearer valid_token"
+      },
+      "body": {
+        "additionalMetadata": "Dangerous Reptile",
+        "file": "snake.exe"
+      }
+    },
+    "statusCode": 415
+  },
+  {
+    "id": 7,
+    "category": {
+      "id": 105,
+      "name": "Horses"
+    },
+    "name": "Mustang",
+    "photoUrls": [
+      "https://example.com/mustang.jpg"
+    ],
+    "tags": [
+      {
+        "id": 5,
+        "name": "Fast"
+      }
+    ],
+    "status": "sold",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet/123/uploadImage",
+      "headers": {
+        "Authorization": "Bearer valid_token"
+      },
+      "body": {
+        "additionalMetadata": "",
+        "file": "mustang.jpg"
+      }
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 8,
+    "category": {
+      "id": 106,
+      "name": "Hamsters"
+    },
+    "name": "Hammy",
+    "photoUrls": [],
+    "tags": [],
+    "status": "pending",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet/123/uploadImage",
+      "headers": {
+        "Authorization": "Bearer valid_token"
+      },
+      "body": {
+        "additionalMetadata": "Small Pet"
+      }
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 9,
+    "category": {
+      "id": 107,
+      "name": "Turtles"
+    },
+    "name": "Shelly",
+    "photoUrls": [
+      "https://example.com/shelly.jpg"
+    ],
+    "tags": [
+      {
+        "id": 6,
+        "name": "Slow"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet/123/uploadImage",
+      "headers": {
+        "Authorization": "Bearer valid_token"
+      },
+      "body": {
+        "additionalMetadata": "@#$%^&*()",
+        "file": "shelly.jpg"
+      }
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 10,
+    "category": {
+      "id": 108,
+      "name": "Guinea Pigs"
+    },
+    "name": "Piggy",
+    "photoUrls": [
+      "https://example.com/piggy.jpg"
+    ],
+    "tags": [
+      {
+        "id": 7,
+        "name": "Cuddly"
+      }
+    ],
+    "status": "pending",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet/123/uploadImage",
+      "headers": {
+        "Authorization": "Bearer valid_token"
+      },
+      "body": {
+        "file": "piggy.jpg"
+      }
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 11,
+    "category": {
+      "id": 109,
+      "name": "Rabbits"
+    },
+    "name": "Thumper",
+    "photoUrls": [
+      "https://example.com/thumper.jpg"
+    ],
+    "tags": [
+      {
+        "id": 8,
+        "name": "Energetic"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet/123/uploadImage",
+      "headers": {
+        "Authorization": "Bearer expired_token"
+      },
+      "body": {
+        "additionalMetadata": "Playful Pet",
+        "file": "thumper.jpg"
+      }
+    },
+    "statusCode": 401
+  }
+]

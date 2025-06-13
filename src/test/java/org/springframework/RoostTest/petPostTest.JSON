@@ -1,0 +1,261 @@
+[
+  {
+    "id": 1,
+    "category": {
+      "id": 1,
+      "name": "dogs"
+    },
+    "name": "doggie",
+    "photoUrls": ["http://url1.com"],
+    "tags": [],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet",
+      "headers": {
+        "Authorization": "Bearer valid_token",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "name": "doggie",
+        "photoUrls": ["http://url1.com"],
+        "status": "available"
+      }
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 2,
+    "category": null,
+    "name": null,
+    "photoUrls": ["http://url1.com"],
+    "tags": [],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet",
+      "headers": {
+        "Authorization": "Bearer valid_token",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "photoUrls": ["http://url1.com"]
+      }
+    },
+    "statusCode": 405
+  },
+  {
+    "id": 3,
+    "category": {
+      "id": 1,
+      "name": "dogs"
+    },
+    "name": "doggie",
+    "photoUrls": ["http://url1.com", "http://url2.com"],
+    "tags": [
+      {
+        "id": 101,
+        "name": "vaccinated"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet",
+      "headers": {
+        "Authorization": "Bearer valid_token",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "category": {
+          "id": 1,
+          "name": "dogs"
+        },
+        "name": "doggie",
+        "photoUrls": ["http://url1.com", "http://url2.com"],
+        "tags": [
+          {
+            "id": 101,
+            "name": "vaccinated"
+          }
+        ],
+        "status": "available"
+      }
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 4,
+    "category": {
+      "id": 1,
+      "name": "dogs"
+    },
+    "name": "doggie",
+    "photoUrls": ["http://url1.com"],
+    "tags": [],
+    "status": "invalid",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet",
+      "headers": {
+        "Authorization": "Bearer valid_token",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "name": "doggie",
+        "photoUrls": ["http://url1.com"],
+        "status": "invalid"
+      }
+    },
+    "statusCode": 405
+  },
+  {
+    "id": 5,
+    "category": {
+      "id": 1,
+      "name": "dogs"
+    },
+    "name": "doggie",
+    "photoUrls": ["http://url1.com"],
+    "tags": [],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "name": "doggie",
+        "photoUrls": ["http://url1.com"],
+        "status": "available"
+      }
+    },
+    "statusCode": 401
+  },
+  {
+    "id": 6,
+    "category": null,
+    "name": null,
+    "photoUrls": null,
+    "tags": null,
+    "status": null,
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet",
+      "headers": {
+        "Authorization": "Bearer valid_token",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "name": null,
+        "photoUrls": null,
+        "status": null
+      }
+    },
+    "statusCode": 405
+  },
+  {
+    "id": 7,
+    "category": {
+      "id": 1,
+      "name": "dogs"
+    },
+    "name": "doggie",
+    "photoUrls": [
+      "http://url1.com",
+      "http://url2.com",
+      "http://url3.com",
+      "http://url100.com",
+      "http://url1000.com"
+    ],
+    "tags": [],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet",
+      "headers": {
+        "Authorization": "Bearer valid_token",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "name": "doggie",
+        "photoUrls": [
+          "http://url1.com",
+          "http://url2.com",
+          "http://url3.com",
+          "http://url100.com",
+          "http://url1000.com"
+        ],
+        "status": "available"
+      }
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 8,
+    "category": null,
+    "name": "doggie",
+    "photoUrls": [123],
+    "tags": [],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet",
+      "headers": {
+        "Authorization": "Bearer valid_token",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "name": "doggie",
+        "photoUrls": [123],
+        "status": "available"
+      }
+    },
+    "statusCode": 405
+  },
+  {
+    "id": 9,
+    "category": null,
+    "name": null,
+    "photoUrls": null,
+    "tags": [],
+    "status": null,
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet",
+      "headers": {
+        "Authorization": "Bearer valid_token",
+        "Content-Type": "application/json"
+      },
+      "body": {}
+    },
+    "statusCode": 405
+  },
+  {
+    "id": 10,
+    "category": {
+      "id": 1,
+      "name": "dogs"
+    },
+    "name": "doggie",
+    "photoUrls": ["http://url1.com"],
+    "tags": [],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet",
+      "headers": {
+        "Authorization": "Bearer valid_token",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "id": 123,
+        "name": "doggie",
+        "photoUrls": ["http://url1.com"],
+        "status": "available"
+      }
+    },
+    "statusCode": [200, 405]
+  }
+]
