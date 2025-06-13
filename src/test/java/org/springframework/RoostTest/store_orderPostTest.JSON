@@ -1,0 +1,313 @@
+[
+  {
+    "id": 1,
+    "category": {
+      "id": 101,
+      "name": "Test Category"
+    },
+    "name": "Basic Valid Case",
+    "photoUrls": [
+      "http://example.com/pet1.jpg",
+      "http://example.com/pet2.png"
+    ],
+    "tags": [
+      {
+        "id": 201,
+        "name": "Valid_Tag"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/store/order",
+      "headers": {
+        "Authorization": "Bearer valid_token"
+      },
+      "body": {
+        "id": 123,
+        "petId": 456,
+        "quantity": 10,
+        "shipDate": "2023-01-01T10:00:00Z",
+        "status": "placed",
+        "complete": true
+      }
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 2,
+    "category": {
+      "id": null,
+      "name": ""
+    },
+    "name": null,
+    "photoUrls": [],
+    "tags": [],
+    "status": "invalid_status",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/store/order",
+      "headers": {
+        "Authorization": "Bearer invalid_token"
+      },
+      "body": {
+        "id": "abc",
+        "petId": "xyz",
+        "quantity": "ten",
+        "shipDate": "invalid-date",
+        "status": "unknown",
+        "complete": null
+      }
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 3,
+    "category": {
+      "id": 102,
+      "name": "Boundary Testing"
+    },
+    "name": "Boundary ShipDate Values",
+    "photoUrls": [
+      "http://example.com/image-edge.jpg"
+    ],
+    "tags": [
+      {
+        "id": 202,
+        "name": "Boundary_Tag"
+      }
+    ],
+    "status": "pending",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/store/order",
+      "headers": {
+        "Authorization": "Bearer valid_token"
+      },
+      "body": {
+        "id": 124,
+        "petId": 457,
+        "quantity": 1,
+        "shipDate": "1970-01-01T00:00:00Z",
+        "status": "placed",
+        "complete": true
+      }
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 4,
+    "category": {
+      "id": 103,
+      "name": "Schema Error"
+    },
+    "name": "Empty Request Body",
+    "photoUrls": null,
+    "tags": null,
+    "status": "sold",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/store/order",
+      "headers": {},
+      "body": {}
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 5,
+    "category": {
+      "id": 104,
+      "name": "Numeric Edge Case"
+    },
+    "name": "Large Quantity Value",
+    "photoUrls": [
+      "http://example.com/large-value.jpg"
+    ],
+    "tags": [
+      {
+        "id": 204,
+        "name": "Quantity_Limits"
+      }
+    ],
+    "status": "approved",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/store/order",
+      "headers": {
+        "Authorization": "Bearer valid_token"
+      },
+      "body": {
+        "id": 125,
+        "petId": 458,
+        "quantity": 100000,
+        "shipDate": "2023-01-01T10:00:00Z",
+        "status": "approved",
+        "complete": false
+      }
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 6,
+    "category": {
+      "id": 105,
+      "name": "Validation Nulls"
+    },
+    "name": "Test with Null Values",
+    "photoUrls": [
+      null
+    ],
+    "tags": [
+      {
+        "id": 205,
+        "name": null
+      }
+    ],
+    "status": "placed",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/store/order",
+      "headers": {
+        "Authorization": "Bearer valid_token"
+      },
+      "body": {
+        "id": 126,
+        "petId": 459,
+        "quantity": 10,
+        "shipDate": null,
+        "status": "placed",
+        "complete": null
+      }
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 7,
+    "category": {
+      "id": 106,
+      "name": "Boolean Validation"
+    },
+    "name": "Non-Boolean Complete Field",
+    "photoUrls": [
+      "http://example.com/dtype-error.jpg"
+    ],
+    "tags": [
+      {
+        "id": 206,
+        "name": "Boolean_Type"
+      }
+    ],
+    "status": "placed",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/store/order",
+      "headers": {
+        "Authorization": "Bearer valid_token"
+      },
+      "body": {
+        "id": 127,
+        "petId": 460,
+        "quantity": 10,
+        "shipDate": "2023-01-01T10:00:00Z",
+        "status": "placed",
+        "complete": "yes"
+      }
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 8,
+    "category": {
+      "id": 107,
+      "name": "Security Testing"
+    },
+    "name": "Auth Failure Case",
+    "photoUrls": [
+      "http://example.com/security.jpg"
+    ],
+    "tags": [
+      {
+        "id": 207,
+        "name": "Invalid_Auth"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/store/order",
+      "headers": {
+        "Authorization": "Bearer expired_token"
+      },
+      "body": {
+        "id": 128,
+        "petId": 461,
+        "quantity": 5,
+        "shipDate": "2023-01-01T10:00:00Z",
+        "status": "placed",
+        "complete": true
+      }
+    },
+    "statusCode": 401
+  },
+  {
+    "id": 9,
+    "category": {
+      "id": 108,
+      "name": "Enum Validation"
+    },
+    "name": "Invalid Status Enum",
+    "photoUrls": [
+      "http://example.com/enum-error.jpg"
+    ],
+    "tags": [
+      {
+        "id": 208,
+        "name": "Enum_Error"
+      }
+    ],
+    "status": "undefined",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/store/order",
+      "headers": {
+        "Authorization": "Bearer valid_token"
+      },
+      "body": {
+        "id": 129,
+        "petId": 462,
+        "quantity": 1,
+        "shipDate": "2023-01-01T10:00:00Z",
+        "status": "unknown",
+        "complete": false
+      }
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 10,
+    "category": {
+      "id": 109,
+      "name": "Empty Fields"
+    },
+    "name": "",
+    "photoUrls": [
+      ""
+    ],
+    "tags": [
+      {
+        "id": 209,
+        "name": ""
+      }
+    ],
+    "status": "",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/store/order",
+      "headers": {
+        "Authorization": "Bearer valid_token"
+      },
+      "body": {}
+    },
+    "statusCode": 400
+  }
+]

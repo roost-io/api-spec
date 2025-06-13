@@ -1,0 +1,269 @@
+[
+  {
+    "id": 1,
+    "category": {
+      "id": 101,
+      "name": "dog"
+    },
+    "name": "Buddy",
+    "photoUrls": ["https://example.com/dog1.jpg", "https://example.com/dog2.jpg"],
+    "tags": [
+      {
+        "id": 201,
+        "name": "friendly"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet/123",
+      "headers": {
+        "Authorization": "Bearer validAuthToken",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "name": "Buddy",
+        "status": "available"
+      }
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 2,
+    "category": {
+      "id": 102,
+      "name": "cat"
+    },
+    "name": "Whiskers",
+    "photoUrls": ["https://example.com/cat1.jpg"],
+    "tags": [],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet/",
+      "headers": {
+        "Authorization": "Bearer validAuthToken",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "name": "Whiskers",
+        "status": "available"
+      }
+    },
+    "statusCode": 404
+  },
+  {
+    "id": 3,
+    "category": {
+      "id": 103,
+      "name": "rabbit"
+    },
+    "name": "Thumper",
+    "photoUrls": ["invalidUrl"],
+    "tags": [
+      {
+        "id": 202,
+        "name": "cute"
+      }
+    ],
+    "status": "pending",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet/xyz",
+      "headers": {
+        "Authorization": "Bearer validAuthToken",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "name": "Thumper",
+        "status": "pending"
+      }
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 4,
+    "category": {
+      "id": 104,
+      "name": null
+    },
+    "name": null,
+    "photoUrls": ["https://example.com/noimage.jpg"],
+    "tags": [],
+    "status": "sold",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet/123",
+      "headers": {
+        "Authorization": "Bearer validAuthToken",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "name": null,
+        "status": null
+      }
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 5,
+    "category": {
+      "id": 105,
+      "name": "bird"
+    },
+    "name": "Tweety",
+    "photoUrls": ["https://example.com/bird.jpg"],
+    "tags": [
+      {
+        "id": 203,
+        "name": "yellow"
+      }
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet/123",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "name": "Tweety",
+        "status": "available"
+      }
+    },
+    "statusCode": 401
+  },
+  {
+    "id": 6,
+    "category": {
+      "id": 106,
+      "name": "parrot"
+    },
+    "name": "Polly",
+    "photoUrls": ["https://example.com/parrot.jpg"],
+    "tags": [
+      {
+        "id": 204,
+        "name": "talkative"
+      }
+    ],
+    "status": "pending",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet/123",
+      "headers": {
+        "Authorization": "Bearer invalidAuthToken",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "name": "Polly",
+        "status": "pending"
+      }
+    },
+    "statusCode": 403
+  },
+  {
+    "id": 7,
+    "category": {
+      "id": 107,
+      "name": "hamster"
+    },
+    "name": "Hammy",
+    "photoUrls": [],
+    "tags": [
+      {
+        "id": 205,
+        "name": "small"
+      }
+    ],
+    "status": "sold",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet/123",
+      "headers": {
+        "Authorization": "Bearer validAuthToken",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "name": "Hammy"
+      }
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 8,
+    "category": {
+      "id": 108,
+      "name": "fish"
+    },
+    "name": "Goldie",
+    "photoUrls": ["https://example.com/fish.jpg"],
+    "tags": [],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet/123",
+      "headers": {
+        "Authorization": "Bearer validAuthToken",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "status": "available"
+      }
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 9,
+    "category": {
+      "id": 109,
+      "name": "turtle"
+    },
+    "name": "",
+    "photoUrls": ["https://example.com/turtle.jpg"],
+    "tags": [],
+    "status": "",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet/123",
+      "headers": {
+        "Authorization": "Bearer validAuthToken",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "name": "",
+        "status": ""
+      }
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 10,
+    "category": {
+      "id": 110,
+      "name": "snake"
+    },
+    "name": "SuperCalifragilisticExpialidocious",
+    "photoUrls": ["https://example.com/snake.jpg"],
+    "tags": [
+      {
+        "id": 206,
+        "name": "long"
+      }
+    ],
+    "status": "undefined",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/pet/123",
+      "headers": {
+        "Authorization": "Bearer validAuthToken",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "name": "SuperCalifragilisticExpialidocious",
+        "status": "undefined"
+      }
+    },
+    "statusCode": 405
+  }
+]

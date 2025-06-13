@@ -1,0 +1,301 @@
+[
+  {
+    "id": 1,
+    "category": {
+      "id": 10,
+      "name": "Pets"
+    },
+    "name": "Dog",
+    "photoUrls": ["https://example.com/images/dog.jpg"],
+    "tags": [
+      {"id": 100, "name": "Husky"},
+      {"id": 101, "name": "Golden Retriever"}
+    ],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user/createWithArray",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer valid_token"
+      },
+      "body": {
+        "users": [
+          {
+            "id": 1,
+            "username": "validUser1",
+            "password": "password123",
+            "email": "valid@example.com",
+            "phone": "1234567890"
+          }
+        ]
+      }
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 2,
+    "category": {
+      "id": 11,
+      "name": "MissingDataTests"
+    },
+    "name": null,
+    "photoUrls": [],
+    "tags": [],
+    "status": "pending",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user/createWithArray",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer valid_token"
+      },
+      "body": {
+        "users": []
+      }
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 3,
+    "category": {
+      "id": 12,
+      "name": "ErrorHandlingTests"
+    },
+    "name": "",
+    "photoUrls": ["invalid_url"],
+    "tags": [{"id": 102, "name": ""}],
+    "status": "invalid",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user/createWithArray",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer valid_token"
+      },
+      "body": null
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 4,
+    "category": {
+      "id": 13,
+      "name": "ValidationTests"
+    },
+    "name": "Invalid ID Test",
+    "photoUrls": ["https://example.com/images/cat.jpg"],
+    "tags": [{"id": "invalid_id", "name": "Cat"}],
+    "status": "sold",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user/createWithArray",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer valid_token"
+      },
+      "body": {
+        "users": [
+          {
+            "id": "string_id",
+            "username": "validUser2",
+            "password": "password123",
+            "email": "valid@example.com",
+            "phone": "1234567890"
+          }
+        ]
+      }
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 5,
+    "category": {
+      "id": 14,
+      "name": "MissingFieldsTests"
+    },
+    "name": "Missing Fields Test",
+    "photoUrls": ["https://example.com/images/bird.jpg"],
+    "tags": [{"id": 103, "name": "Parrot"}],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user/createWithArray",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer valid_token"
+      },
+      "body": {
+        "users": [
+          {
+            "id": 5,
+            "password": "password123",
+            "email": "valid@example.com"
+          }
+        ]
+      }
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 6,
+    "category": {
+      "id": 15,
+      "name": "NullValuesTests"
+    },
+    "name": null,
+    "photoUrls": ["https://example.com/images/lion.jpg"],
+    "tags": [{"id": 104, "name": "Lion"}],
+    "status": "pending",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user/createWithArray",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer valid_token"
+      },
+      "body": {
+        "users": [
+          {
+            "id": 6,
+            "username": "validUser3",
+            "email": null,
+            "phone": null
+          }
+        ]
+      }
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 7,
+    "category": {
+      "id": 16,
+      "name": "DuplicateUsersTests"
+    },
+    "name": "Duplicate Test",
+    "photoUrls": ["https://example.com/images/elephant.jpg"],
+    "tags": [{"id": 105, "name": "Elephant"}],
+    "status": "sold",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user/createWithArray",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer valid_token"
+      },
+      "body": {
+        "users": [
+          {
+            "id": 7,
+            "username": "duplicateUser",
+            "password": "password123",
+            "email": "duplicate@example.com",
+            "phone": "9999999999"
+          },
+          {
+            "id": 7,
+            "username": "duplicateUser",
+            "password": "password123",
+            "email": "duplicate@example.com",
+            "phone": "9999999999"
+          }
+        ]
+      }
+    },
+    "statusCode": 200
+  },
+  {
+    "id": 8,
+    "category": {
+      "id": 17,
+      "name": "InvalidEmailTests"
+    },
+    "name": "Invalid Email Test",
+    "photoUrls": ["https://example.com/images/fish.jpg"],
+    "tags": [{"id": 106, "name": "Fish"}],
+    "status": "available",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user/createWithArray",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer valid_token"
+      },
+      "body": {
+        "users": [
+          {
+            "id": 8,
+            "username": "validUser4",
+            "password": "password123",
+            "email": "invalid-email-format",
+            "phone": "1234567890"
+          }
+        ]
+      }
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 9,
+    "category": {
+      "id": 18,
+      "name": "LongUsernameTests"
+    },
+    "name": "Long Username Test",
+    "photoUrls": ["https://example.com/images/snake.jpg"],
+    "tags": [{"id": 107, "name": "Snake"}],
+    "status": "pending",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user/createWithArray",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer valid_token"
+      },
+      "body": {
+        "users": [
+          {
+            "id": 9,
+            "username": "a".repeat(300),
+            "password": "password123",
+            "email": "valid@example.com",
+            "phone": "1234567890"
+          }
+        ]
+      }
+    },
+    "statusCode": 400
+  },
+  {
+    "id": 10,
+    "category": {
+      "id": 19,
+      "name": "NegativeIdTests"
+    },
+    "name": "Negative ID Test",
+    "photoUrls": ["https://example.com/images/monkey.jpg"],
+    "tags": [{"id": 108, "name": "Monkey"}],
+    "status": "sold",
+    "RequestBody": {
+      "method": "POST",
+      "url": "/v2/user/createWithArray",
+      "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer valid_token"
+      },
+      "body": {
+        "users": [
+          {
+            "id": -10,
+            "username": "validUser5",
+            "password": "password123",
+            "email": "valid@example.com",
+            "phone": "1234567890"
+          }
+        ]
+      }
+    },
+    "statusCode": 400
+  }
+]

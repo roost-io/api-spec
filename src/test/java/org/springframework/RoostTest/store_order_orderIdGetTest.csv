@@ -1,0 +1,11 @@
+orderId^|^RequestBody^|^statusCode
+1^|^{"userId":101,"action":"create","data":{"name":"Alice","age":30,"email":"alice@example.com"}}^|^200
+2^|^{"userId":102,"action":"update","data":{"name":"Bob","age":35,"email":"bob@example.com"}}^|^200
+3^|^{"userId":103,"action":"delete","data":{"name":"Charlie","age":40,"email":"charlie@example.com"}}^|^404
+4^|^{"userId":104,"action":"create","data":{"name":"Diana","age":25,"email":"diana@example.com"}}^|^200
+5^|^{"userId":105,"action":"update","data":{"name":"Edward","age":45,"email":"edward@example.com"}}^|^400
+6^|^{"userId":106,"action":"delete","data":{"name":"Fiona","age":29,"email":"fiona@example.com"}}^|^404
+7^|^{"userId":107,"action":"create","data":{"name":"George","age":50,"email":"george@example.com"}}^|^200
+8^|^{"userId":108,"action":"update","data":{"name":"Hannah","age":22,"email":"hannah@example.com"}}^|^200
+9^|^{"userId":109,"action":"delete","data":{"name":"Isaac","age":33,"email":"isaac@example.com"}}^|^404
+10^|^{"userId":110,"action":"create","data":{"name":"Jane","age":27,"email":"jane@example.com"}}^|^200

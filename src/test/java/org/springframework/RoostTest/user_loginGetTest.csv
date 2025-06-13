@@ -1,0 +1,11 @@
+username^|^password^|^RequestBody^|^statusCode
+johndoe123^|^securePass1^|^{"action":"login","timestamp":"2023-10-01T12:00:00Z","details":{"loginSource":"mobile"}}^|^200
+janedoe456^|^myp@ss456^|^{"action":"updateProfile","timestamp":"2023-10-02T14:20:00Z","details":{"profileSection":"address"}}^|^200
+alexsmith789^|^topSecret789^|^{"action":"resetPassword","timestamp":"2023-10-03T09:15:00Z","details":{"resetMethod":"email"}}^|^200
+markus_new^|^passF0rMark^|^{"action":"register","timestamp":"2023-10-04T10:45:00Z","details":{"referrer":"homePage"}}^|^200
+lara_dev12^|^devLara!12^|^{"action":"deleteAccount","timestamp":"2023-10-05T08:30:00Z","details":{"reason":"privacy concerns"}}^|^400
+steve_nxt^|^NxtGenSteve89^|^{"action":"upload","timestamp":"2023-10-01T16:00:00Z","details":{"fileType":"document"}}^|^200
+emma_qa91^|^qaTest91!^|^{"action":"submitFeedback","timestamp":"2023-10-06T19:00:00Z","details":{"rating":5}}^|^200
+moore_devops^|^DevOpsMoore88^|^{"action":"fetchAnalytics","timestamp":"2023-10-07T11:25:00Z","details":{"filterDate":"2023-09-30"}}^|^200
+olivia_design^|^LivDesign#23^|^{"action":"changeSetting","timestamp":"2023-10-08T13:40:00Z","details":{"settingType":"notifications"}}^|^200
+brad_cto45^|^CTOBrad#45^|^{"action":"connectAccount","timestamp":"2023-10-01T15:00:00Z","details":{"platform":"linkedin"}}^|^200
