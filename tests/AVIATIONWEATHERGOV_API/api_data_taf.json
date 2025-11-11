@@ -1,0 +1,72 @@
+[
+  {
+    "ids": "KMIA,KFLL,KPBI",
+    "bbox": "-80.5,25.5,-80.0,26.0",
+    "format": "xml",
+    "metar": true,
+    "time": "2023-11-01T12:00:00Z",
+    "date": "2023-11-01",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "ids": "KJFK,KLGA,KEWR",
+    "bbox": "-74.3,40.5,-73.5,41.0",
+    "format": "json",
+    "metar": false,
+    "time": "2023-11-02T18:30:00Z",
+    "date": "2023-11-02",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "ids": "KSFO,KOAK",
+    "bbox": "-122.5,37.5,-122.0,38.0",
+    "format": "csv",
+    "metar": true,
+    "time": "2023-11-03T09:15:00Z",
+    "date": "2023-11-03",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "ids": "",
+    "bbox": "invalidBboxFormat",
+    "format": "invalid_format",
+    "metar": true,
+    "time": "not-a-valid-time",
+    "date": "11/04/2023",
+    "statusCode": 400,
+    "scenario": "Input validation errors"
+  },
+  {
+    "ids": "INVALID_STATION_ID_XYZ123",
+    "bbox": "-200.0,100.0,-190.0,110.0",
+    "format": "pdf",
+    "metar": false,
+    "time": "2023-13-01T25:70:00Z",
+    "date": "2023-13-32",
+    "statusCode": 400,
+    "scenario": "Input validation errors"
+  },
+  {
+    "ids": "KDEN,KCOS",
+    "bbox": "-105.0,39.5,-104.5,40.0",
+    "format": "html",
+    "metar": true,
+    "time": "2023-11-05T14:45:00Z",
+    "date": "2023-11-05",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "ids": "#$%^&",
+    "bbox": "not,a,valid,bbox",
+    "format": "",
+    "metar": true,
+    "time": "yesterday",
+    "date": "tomorrow",
+    "statusCode": 400,
+    "scenario": "Input validation errors"
+  }
+]
