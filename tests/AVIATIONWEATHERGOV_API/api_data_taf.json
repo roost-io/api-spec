@@ -1,0 +1,52 @@
+[
+  {
+    "ids": "KLAX,KSFO,KORD",
+    "bbox": "-95,40,-90,45",
+    "format": "json",
+    "metar": true,
+    "time": "12:00Z",
+    "date": "2023-10-15",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "ids": "KBOS,KJFK,KDEN",
+    "bbox": "-120,30,-110,35",
+    "format": "xml",
+    "metar": false,
+    "time": "15:30Z",
+    "date": "2023-10-16",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "ids": "KAUS,KMIA",
+    "bbox": "-100,25,-95,30",
+    "format": "csv",
+    "metar": true,
+    "time": "08:45Z",
+    "date": "2023-10-17",
+    "statusCode": 200,
+    "scenario": "successful operation"
+  },
+  {
+    "ids": "",
+    "bbox": "invalid-coordinates",
+    "format": "unsupported_format",
+    "metar": true,
+    "time": "25:00Z",
+    "date": "2023-13-45",
+    "statusCode": 400,
+    "scenario": "Input validation errors"
+  },
+  {
+    "ids": "INVALID_STATION_ID123",
+    "bbox": "-200,100,-190,110",
+    "format": "json",
+    "metar": false,
+    "time": "abc",
+    "date": "not-a-date",
+    "statusCode": 400,
+    "scenario": "Input validation errors"
+  }
+]
